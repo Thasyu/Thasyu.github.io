@@ -20,7 +20,7 @@ body {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background-image: url("../images/Adobe_Express_file.png");
+  background-image: url("https://Thasyu.github.io/images/Adobe_Express_file.png");
   background-size: contain;       /* 画像全体を表示 */
   background-repeat: no-repeat;
   background-position: center center;
@@ -190,3 +190,4 @@ p {
     padding: 60px 15px !important;
   }
 }
+
