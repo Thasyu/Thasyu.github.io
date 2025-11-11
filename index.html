@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thasyu World トップページ">
+  <title>Thasyu World</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+  <script src="js/bubble.js" defer></script>
+</head>
+
+<body id="top" class="logged-in">
+
+  <!-- ハンバーガーメニュー -->
+  <div class="hamburger-menu" id="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- メニュー -->
+  <nav class="menu-panel" id="menu-panel">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="login.html" class="logout-link">ログアウト</a></li>
+    </ul>
+  </nav>
+
+  <!-- ヒーロー -->
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="fade-in">Welcome to Thasyu World</h1>
+      <p class="fade-in delay">チャシューによる最高の世界へ</p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section id="services" class="section service-section">
+    <h2 class="fade-in-up">Services</h2>
+    <div class="service-items">
+      <div class="item fade-in-up delay"><a href="game/game.html" class="service-link">ゲームコーナー 🎮</a></div>
+      <div class="item fade-in-up delay2">サービスBについての説明</div>
+      <div class="item fade-in-up delay3">サービスCについての説明</div>
+    </div>
+  </section>
+
+  <!-- Magazine -->
+  <section class="magazine-section">
+    <h2>Thasyu World マガジン</h2>
+
+    <div class="magazine-item fade-in-left">
+      <div class="magazine-image">
+        <img src="images/IMG_4016_preview_rev_1.png" alt="ちゃしゅまるくん">
+      </div>
+      <div class="magazine-text">
+        <h3>ちゃしゅまるくん紹介</h3>
+        <p class="chashu-text">性格はとっても優しくて、ちょっぴり甘えんぼさん。</p>
+        <p class="chashu-text">大好きなものは、やっぱりチャーシュー！</p>
+        <p class="chashu-text">ついつい夢中になっちゃうんです。</p>
+        <p class="chashu-text">お昼になると、ふわふわのお昼寝タイム</p>
+        <p class="chashu-text">音楽を聞いて、ゆったり過ごします。</p>
+        <p class="chashu-text">趣味はあちこち旅すること。</p>
+        <p class="chashu-text">新しい場所に行くのが大好きです。</p>
+        <p class="chashu-text">夢は、いつか伝説のチャーシューを作ること。</p>
+        <p class="chashu-text">今日もコツコツがんばります。</p>
+      </div>
+    </div>
+
+    <div class="magazine-item reverse fade-in-right">
+      <div class="magazine-image">
+        <img src="images/IMG_5242_preview_rev_1.png" alt="冒険イメージ">
+      </div>
+      <div class="magazine-text">
+        <h3 class="knight-title">憧れの騎士王になるための三箇条</h3>
+        <p class="highlight">一つ、挑戦を恐れず行動する</p>
+        <p class="highlight">一つ、心と体を鍛える</p>
+        <p class="highlight">一つ、自分を信じ、継続する</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <h2 class="fade-in-up">Contact</h2>
+    <p class="fade-in-up delay">お問い合わせはこちらからどうぞ。</p>
+    <a href="#top" class="btn fade-in-up delay3">トップに戻る</a>
+  </section>
+
+  <!-- シャボン玉 -->
+  <div class="bubble-container"></div>
+
+  <!-- ハンバーガー JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menu = document.getElementById("menu-panel");
+      const burger = document.getElementById("hamburger-menu");
+
+      burger.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        burger.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
