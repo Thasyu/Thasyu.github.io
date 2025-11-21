@@ -1,0 +1,202 @@
+/* ------------------------------------------------- */
+/* フォントの読み込みはHTMLで行う */
+/* ------------------------------------------------- */
+
+body {
+    /* フォントは丸みのあるものを優先 */
+    font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+    
+    /* 画面全体を覆うグラデーションの背景 */
+    background: linear-gradient(135deg, #fff0f5 0%, #fefcfd 100%); 
+    
+    /* スクロールバーが表示されない限り中央に配置 */
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* フォーム全体 */
+.form-container {
+    max-width: 500px; /* 少し狭くし、上品な印象に */
+    width: 100%;
+    margin: 40px auto;
+    padding: 35px;
+    
+    /* 背景色を白に近いクリーム色にして、上品さを強調 */
+    background: #fffafa; 
+    
+    /* 枠線を二重線の破線にして、手書き風の可愛さをプラス */
+    border: 3px double #ffc0cb; /* チェリーピンク */
+    
+    border-radius: 25px; /* 角を大きく丸めて、ゆるふわ感をMAXに */
+    /* 影を大きく、色を薄くして、優しく浮き上がらせる */
+    box-shadow: 0 8px 20px rgba(255, 192, 203, 0.5); 
+    
+    /* 中央寄せの基盤（これを維持） */
+    text-align: center;
+}
+
+/* タイトル・説明文 */
+.form-container h2 {
+    /* 色を濃いピンクブラウンに変更し、上品な印象に */
+    color: #cc3366; 
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.form-container p {
+    color: #8b6e6e; /* 落ち着いたブラウン系の色 */
+    margin-bottom: 30px;
+    font-size: 17px;
+    max-width: 700px;
+}
+
+/* 必須バッジ */
+.required-badge {
+    display: inline-block;
+    background-color: #ffc0cb;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+/* ラベルのスタイル */
+label {
+    display: block;
+    text-align: left; /* ラベルを左寄せに戻す */
+    margin-bottom: 8px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ff69b4; /* 濃いピンク */
+    font-size: 15px;
+}
+
+/* formタグ内の要素（中央寄せ解除） */
+.form-container form {
+    text-align: left; /* 入力要素を左寄せに戻す */
+}
+
+/* 入力欄とテキストエリア */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    
+    /* 角を大きく丸める */
+    border-radius: 16px; 
+    
+    /* 枠線を極細の薄いピンクにする */
+    border: 1px solid #ffdde1; 
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* フォーカス時のアニメーション（上品なピンク） */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #ff80aa; /* フォーカスで少し濃いピンクに */
+    box-shadow: 0 0 0 3px rgba(255, 128, 170, 0.2);
+    outline: none; /* デフォルトのアウトラインを削除 */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* 送信ボタン */
+.form-container button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    
+    /* 背景色を鮮やかなピンク */
+    background: #ff69b4;
+    color: #fff;
+    
+    border: none;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background: #ff4d94;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4); /* 浮き上がるような可愛い影 */
+}
+
+/* ------------------------------------------------- */
+/* トップに戻るボタンのスタイル (中央寄せを適用) */
+/* ------------------------------------------------- */
+.back-to-top-btn {
+    /* ★ 修正点1: 中央寄せのためインラインブロックに変更 ★ */
+    display: inline-block; 
+    
+    /* ★ 修正点2: 横幅いっぱいの指定を削除 ★ */
+    /* width: 100%; <- 削除 */
+    
+    /* フォームの送信ボタンと区別するため、少し薄い色に */
+    background: #ffb6c1; /* 淡いピンク */
+    color: #fff;
+    
+    /* パディングは幅を調整するために使用 */
+    padding: 12px 30px; /* 左右のパディングを増やして幅を調整 */
+    
+    /* 上下の余白 */
+    margin-top: 20px; 
+    
+    /* リンクの下線を消す */
+    text-decoration: none; 
+    
+    /* テキストは中央 */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    
+    /* 角を丸く */
+    border-radius: 12px;
+    border: 2px solid #ffb6c1;
+    transition: all 0.3s ease;
+}
+
+/* ホバーエフェクト（ゆるふわ感を出す） */
+.back-to-top-btn:hover {
+    background: #ff80aa; /* ホバーで少し濃く */
+    border-color: #ff69b4;
+    /* 影を大きくして少し浮き上がらせる */
+    box-shadow: 0 6px 10px rgba(255, 137, 187, 0.4); 
+}
+
+/* スマートフォンでの調整 */
+@media screen and (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+    .form-container button[type="submit"] {
+        padding: 14px;
+        font-size: 16px;
+    }
+    /* スマホでのパディング調整をよりきれいに */
+    .back-to-top-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}

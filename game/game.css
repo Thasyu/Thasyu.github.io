@@ -1,0 +1,197 @@
+/* =========================================================
+   🌸 Thasyu World | Game Corner - デザインブラッシュアップ版
+   ========================================================= */
+
+/* ====== 全体 ====== */
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background: linear-gradient(135deg, #fff0f5, #ffe6f2);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ====== サイドバー ====== */
+.sidebar {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 220px;
+  height: calc(100% - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #ffa6c9, #ffbcd9);
+  border-radius: 0 20px 20px 0;
+  box-shadow: 4px 0 20px rgba(255, 182, 193, 0.4);
+  padding: 25px 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 1.4rem;
+  color: white;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.6);
+}
+
+/* メニューリンク共通 */
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 12px;
+  transition: background 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* ====== ホームボタン ====== */
+.home-btn {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.home-btn a {
+  display: inline-block;
+  padding: 10px 60px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffb6c1, #ff8fab);
+  box-shadow: 0 0 12px rgba(255, 182, 193, 0.6);
+  transition: all 0.3s ease;
+}
+
+.home-btn a:hover {
+  background: linear-gradient(135deg, #ffc1cc, #ff99aa);
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.8);
+  transform: translateY(-2px);
+}
+
+/* ====== タイトルバー ====== */
+.page-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ffc0cb, #ffb6c1);
+  box-shadow: 0 4px 20px rgba(255, 182, 193, 0.4);
+  text-align: center;
+  padding: 25px 20px;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+.page-title h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #e75480;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* ====== メインコンテンツ ====== */
+.main-content {
+  margin-left: 240px;
+  margin-top: 120px;
+  padding: 30px;
+}
+
+/* ====== ゲームグリッド ====== */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列 */
+  grid-template-rows: repeat(2, auto);   /* 2行 */
+  gap: 50px 80px;                        /* 行と列の間隔（上下50px, 左右80px） */
+  justify-content: center;
+  align-content: start;
+  padding-top: 40px;
+  max-width: 900px;                      /* 中央に収まるように */
+  margin: 0 auto;    
+}
+
+/* ====== ゲームカード ====== */
+.game-card {
+  background: rgba(255, 240, 245, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4);
+  padding: 25px;
+  text-align: center;
+  width: 100%;
+  max-width: 340px;
+  height: 230px;                         /* 各カードの高さを統一 */
+  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(4px);
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(255, 105, 180, 0.5);
+}
+
+.game-card h2 {
+  font-size: 1.6rem;
+  color: #e75480;
+  margin-bottom: 10px;
+}
+
+.game-card p {
+  margin-bottom: 20px;
+  color: #800040;
+  font-weight: 500;
+}
+
+/* ====== リンクボタン ====== */
+.recommend-card {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+}
+
+.recommend-card:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.4);
+}
+
+/* ====== レスポンシブ ====== */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title h1 {
+    font-size: 1.5rem;
+  }
+  .game-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
