@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌸 かわいいテトリス 🌸</title>
+  <link rel="stylesheet" href="tetris.css">
+</head>
+<body>
+  <!-- Now Loading -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <span class="loading-text">Now Loading</span><br>
+      <div class="loading-dots">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- 背景の光の粒子 -->
+    <div class="particles"></div>
+    
+  <!-- 左サイドバー（スマホでは非表示） -->
+  <aside class="sidebar">
+    <h2>メニュー</h2>
+    <a href="/game/game.html" class="back-home">ゲームコーナーに戻る</a>
+  </aside>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <!-- タイトル -->
+    <header>
+      <h1>🌸 かわいいテトリス 🌸</h1>
+    </header>
+
+    <div class="game-container-mobile">
+      <!-- ゲーム盤 -->
+      <div class="tetris-container">
+        <canvas id="tetris" width="300" height="600"></canvas>
+      </div>
+
+      <!-- スマホ用操作ボタン -->
+      <div class="controls">
+        <button data-action="left">◀</button>
+        <button data-action="right">▶</button>
+        <button data-action="down">▼</button>
+        <button data-action="drop">⤓</button>
+        <button data-action="rotate-left">⟲</button>
+        <button data-action="rotate-right">⟳</button>
+      </div>
+
+      <!-- Nextブロック -->
+      <div class="next-block">
+        <h3>Next</h3>
+        <canvas id="next" width="120" height="120"></canvas>
+      </div>
+
+      <!-- スコアボード -->
+      <div class="scoreboard">
+        <div>Score: <span id="score">0</span></div>
+        <div>Level: <span id="level">1</span></div>
+      </div>
+
+      <!-- スタート＆リセットボタン -->
+      <div class="game-controls">
+        <button id="start-btn">ゲームスタート</button>
+        <button id="reset-btn">リセット</button>
+      </div>
+
+      <!-- ルール折りたたみ -->
+      <div class="rules">
+        <button class="toggle-btn">ルールを見る ▼</button>
+        <div class="rule-content">
+          <p>操作方法: A=左 D=右 S=下 W=一気落とし Q=左回転 E=右回転</p>
+          <p>・横一列を揃えると消える</p>
+          <p>・レベルが上がると落下速度が速くなる</p>
+        </div>
+      </div>
+
+      <!-- ゲームコーナーに戻るボタン -->
+      <div class="back-button-mobile">
+        <a href="/game/game.html" class="back-home-mobile">ゲームコーナーに戻る</a>
+      </div>
+    </div>
+
+    <!-- PC用レイアウト -->
+    <div class="game-wrapper">
+      <!-- メイン盤 -->
+      <div class="tetris-container">
+        <canvas id="tetris-pc" width="300" height="600"></canvas>
+      </div>
+
+      <!-- 右パネル -->
+      <div class="right-panel">
+        <!-- Nextブロック -->
+        <div class="next-block">
+          <h3>Next</h3>
+          <canvas id="next-pc" width="120" height="120"></canvas>
+        </div>
+
+        <!-- スコアボード -->
+        <div class="scoreboard">
+          <div>Score: <span id="score-pc">0</span></div>
+          <div>Level: <span id="level-pc">1</span></div>
+        </div>
+
+        <!-- スタート＆リセットボタン（右パネル内） -->
+        <div class="game-controls">
+          <button id="start-btn-pc">ゲームスタート</button>
+          <button id="reset-btn-pc">リセット</button>
+        </div>
+
+        <!-- ルール折りたたみ -->
+        <div class="rules">
+          <button class="toggle-btn">ルールを見る ▼</button>
+          <div class="rule-content">
+            <p>操作方法: A=左 D=右 S=下 W=一気落とし Q=左回転 E=右回転</p>
+            <p>・横一列を揃えると消える</p>
+            <p>・レベルが上がると落下速度が速くなる</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="tetris.js"></script>
+</body>
+</html>
