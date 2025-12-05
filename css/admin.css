@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.admin-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.admin-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #764ba2;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.admin-main {
+  padding: 40px;
+}
+
+.contacts-section h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.filter-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+#search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.refresh-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+  background: #764ba2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card {
+  background: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+  transform: translateY(-3px);
+}
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.contact-email {
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-date {
+  font-size: 12px;
+  color: #999;
+  padding: 5px 12px;
+  background: white;
+  border-radius: 15px;
+}
+
+.contact-message {
+  color: #555;
+  line-height: 1.6;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.loading {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  padding: 40px;
+}
+
+.no-contacts {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  padding: 40px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 2px dashed #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-main {
+    padding: 20px;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+
+  .contact-header {
+    flex-direction: column;
+  }
+}
