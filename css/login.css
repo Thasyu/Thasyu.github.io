@@ -1,0 +1,174 @@
+body {
+  background: radial-gradient(circle at top left, #ffe6f2, #f8faff);
+  font-family: "Noto Sans JP", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #ff91a4;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff91a4;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 5px;
+}
+
+.login-btn:hover {
+  background-color: #ff6680;
+}
+
+#error-message {
+  color: red;
+  margin-top: 15px;
+  display: none;
+  font-size: 14px;
+}
+
+.register-button-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.register-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #ff91a4, #ff6680);
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(255, 102, 128, 0.4);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 30px 35px;
+    width: 280px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .subtitle {
+    font-size: 13px;
+  }
+  
+  input {
+    padding: 9px;
+    font-size: 15px;
+  }
+  
+  .login-btn {
+    padding: 9px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 25px 30px;
+    width: 260px;
+  }
+  
+  .title {
+    font-size: 22px;
+  }
+  
+  .subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .login-btn {
+    padding: 8px;
+    font-size: 15px;
+  }
+  
+  .register-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
