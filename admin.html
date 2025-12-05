@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>管理者ページ - お問い合わせ一覧</title>
+  <link rel="stylesheet" href="css/admin.css" />
+  <script src="js/admin.js" defer></script>
+</head>
+<body>
+  <div class="admin-container">
+    <header class="admin-header">
+      <h1>管理者ページ</h1>
+      <div class="header-actions">
+        <span id="admin-username" class="username"></span>
+        <button id="logout-btn" class="logout-btn">ログアウト</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section class="contacts-section">
+        <h2>お問い合わせ一覧</h2>
+        <div class="filter-section">
+          <input type="text" id="search-input" placeholder="名前やメールで検索..." />
+          <button id="refresh-btn" class="refresh-btn">更新</button>
+        </div>
+        
+        <div id="contacts-list" class="contacts-list">
+          <p class="loading">読み込み中...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
