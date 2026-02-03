@@ -604,3 +604,219 @@ p.e {
 	text-align: right;
 	border-bottom: dotted 1px gray;
 }
+
+/* iPad 横画面（ランドスケープ）専用設定 */
+@media screen and (orientation: landscape) {
+	body {
+		padding: 75px 0 180px 0;
+		margin: 0% 5%;
+		font-size: 17px;
+	}
+	
+	h1 {
+		padding: 12px 28px;
+		font-size: 18pt;
+	}
+	
+	h2 {
+		padding: 12px 18px;
+		margin: 28px 0 14px 0;
+		font-size: 19px;
+	}
+	
+	body > ol > li > h2 {
+		padding: 12px 18px;
+		margin: 28px 0 14px 0;
+		font-size: 19px;
+	}
+	
+	.home-button {
+		top: 14px;
+		right: 14px;
+		padding: 9px 18px;
+		font-size: 15px;
+	}
+	
+	#navigator {
+		bottom: 95px;
+	}
+	
+	.nav-btn {
+		padding: 9px 18px;
+		font-size: 14px;
+	}
+	
+	ol.katakana > li {
+		padding: 12px 16px 12px 50px;
+		margin: 7px 0 16px 0;
+		font-size: 17px;
+		line-height: 1.4;
+	}
+	
+	ol.katakana > li:before {
+		width: 15px;
+		height: 15px;
+		left: 15px;
+	}
+	
+	li.selected:before {
+		font-size: 13px;
+	}
+	
+	#progress {
+		font-size: 11pt;
+		padding: 5px 14px;
+		border-radius: 14px;
+	}
+	
+	#result {
+		margin: 20px auto;
+		min-height: 45px;
+		font-size: 26px;
+		padding: 14px;
+	}
+	
+	body > ul > li > a,
+	#menu ul li a {
+		padding: 15px 18px;
+		font-size: 17px;
+	}
+	
+	body > ul > li small,
+	#menu ul li span {
+		font-size: 13px;
+	}
+	
+	#score {
+		font-size: 15pt;
+		margin: 70px auto 18px auto;
+		padding: 28px;
+	}
+	
+	.score-title {
+		font-size: 22pt;
+		margin-bottom: 20px;
+	}
+	
+	.progress-container {
+		height: 55px;
+		border-radius: 28px;
+	}
+	
+	.progress-bar {
+		border-radius: 28px;
+	}
+	
+	.progress-text {
+		font-size: 26pt;
+		margin-top: 14px;
+	}
+}
+
+/* iPad 縦画面（ポートレート）専用設定 */
+@media screen and (orientation: portrait) {
+	body {
+		padding: 80px 0 190px 0;
+		margin: 0% 6%;
+		font-size: 18px;
+	}
+	
+	h1 {
+		padding: 14px 32px;
+		font-size: 20pt;
+	}
+	
+	h2 {
+		padding: 13px 20px;
+		margin: 32px 0 16px 0;
+		font-size: 20px;
+	}
+	
+	body > ol > li > h2 {
+		padding: 13px 20px;
+		margin: 32px 0 16px 0;
+		font-size: 20px;
+	}
+	
+	.home-button {
+		top: 16px;
+		right: 16px;
+		padding: 10px 20px;
+		font-size: 16px;
+	}
+	
+	#navigator {
+		bottom: 90px;
+	}
+	
+	.nav-btn {
+		padding: 10px 20px;
+		font-size: 15px;
+	}
+	
+	ol.katakana > li {
+		padding: 14px 18px 14px 55px;
+		margin: 8px 0 18px 0;
+		font-size: 18px;
+		line-height: 1.5;
+	}
+	
+	ol.katakana > li:before {
+		width: 16px;
+		height: 16px;
+		left: 16px;
+	}
+	
+	li.selected:before {
+		font-size: 14px;
+	}
+	
+	#progress {
+		font-size: 12pt;
+		padding: 6px 16px;
+		border-radius: 16px;
+	}
+	
+	#result {
+		margin: 24px auto;
+		min-height: 50px;
+		font-size: 28px;
+		padding: 16px;
+	}
+	
+	body > ul > li > a,
+	#menu ul li a {
+		padding: 16px 20px;
+		font-size: 18px;
+	}
+	
+	body > ul > li small,
+	#menu ul li span {
+		font-size: 14px;
+	}
+	
+	#score {
+		font-size: 16pt;
+		margin: 80px auto 20px auto;
+		padding: 32px;
+	}
+	
+	.score-title {
+		font-size: 24pt;
+		margin-bottom: 24px;
+	}
+	
+	.progress-container {
+		height: 60px;
+		border-radius: 30px;
+	}
+	
+	.progress-bar {
+		border-radius: 30px;
+	}
+	
+	.progress-text {
+		font-size: 28pt;
+		margin-top: 16px;
+	}
+}
