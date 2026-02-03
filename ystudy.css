@@ -608,108 +608,108 @@ p.e {
 /* iPad 横画面（ランドスケープ）専用設定 */
 @media screen and (orientation: landscape) {
 	body {
-		padding: 43px 0 107px 0;
-		margin: 0% 2%;
-		font-size: 10px;
+		padding: 55px 0 135px 0;
+		margin: 0% 2.5%;
+		font-size: 13px;
 	}
 	
 	h1 {
-		padding: 5px 13px;
-		font-size: 11pt;
+		padding: 7px 18px;
+		font-size: 14pt;
 	}
 	
 	h2 {
-		padding: 5px 9px;
-		margin: 13px 0 7px 0;
-		font-size: 11px;
+		padding: 7px 12px;
+		margin: 18px 0 9px 0;
+		font-size: 15px;
 	}
 	
 	body > ol > li > h2 {
-		padding: 5px 9px;
-		margin: 13px 0 7px 0;
-		font-size: 11px;
+		padding: 7px 12px;
+		margin: 18px 0 9px 0;
+		font-size: 15px;
 	}
 	
 	.home-button {
-		top: 7px;
-		right: 7px;
-		padding: 5px 9px;
-		font-size: 9px;
+		top: 9px;
+		right: 9px;
+		padding: 6px 12px;
+		font-size: 12px;
 	}
 	
 	#navigator {
-		bottom: 57px;
+		bottom: 75px;
 	}
 	
 	.nav-btn {
-		padding: 5px 9px;
-		font-size: 8px;
+		padding: 6px 12px;
+		font-size: 11px;
 	}
 	
 	ol.katakana > li {
-		padding: 6px 8px 6px 28px;
-		margin: 3px 0 8px 0;
-		font-size: 10px;
-		line-height: 1.25;
+		padding: 8px 10px 8px 38px;
+		margin: 4px 0 10px 0;
+		font-size: 13px;
+		line-height: 1.3;
 	}
 	
 	ol.katakana > li:before {
-		width: 9px;
-		height: 9px;
-		left: 9px;
+		width: 12px;
+		height: 12px;
+		left: 11px;
 	}
 	
 	li.selected:before {
-		font-size: 7px;
+		font-size: 10px;
 	}
 	
 	#progress {
-		font-size: 6pt;
-		padding: 3px 7px;
-		border-radius: 7px;
+		font-size: 8pt;
+		padding: 3px 8px;
+		border-radius: 8px;
 	}
 	
 	#result {
-		margin: 11px auto;
-		min-height: 24px;
-		font-size: 15px;
-		padding: 7px;
+		margin: 14px auto;
+		min-height: 32px;
+		font-size: 19px;
+		padding: 8px;
 	}
 	
 	body > ul > li > a,
 	#menu ul li a {
-		padding: 8px 9px;
-		font-size: 10px;
+		padding: 10px 12px;
+		font-size: 13px;
 	}
 	
 	body > ul > li small,
 	#menu ul li span {
-		font-size: 7px;
+		font-size: 10px;
 	}
 	
 	#score {
-		font-size: 9pt;
-		margin: 33px auto 9px auto;
-		padding: 13px;
+		font-size: 11pt;
+		margin: 40px auto 12px auto;
+		padding: 18px;
 	}
 	
 	.score-title {
-		font-size: 13pt;
-		margin-bottom: 11px;
+		font-size: 16pt;
+		margin-bottom: 14px;
 	}
 	
 	.progress-container {
-		height: 30px;
-		border-radius: 15px;
+		height: 38px;
+		border-radius: 19px;
 	}
 	
 	.progress-bar {
-		border-radius: 15px;
+		border-radius: 19px;
 	}
 	
 	.progress-text {
-		font-size: 15pt;
-		margin-top: 7px;
+		font-size: 18pt;
+		margin-top: 8px;
 	}
 }
 
