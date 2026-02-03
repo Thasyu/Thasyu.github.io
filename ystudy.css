@@ -608,29 +608,123 @@ p.e {
 /* iPad Pro 13インチ 横画面対応 */
 @media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
 	body {
-		padding: 95px 0 220px 0;
+		padding: 85px 0 200px 0;
+		font-size: 18px;
+	}
+	
+	h1 {
+		padding: 14px 32px;
+		font-size: 20pt;
+	}
+	
+	h2 {
+		padding: 14px 20px;
+		font-size: 20px;
+	}
+	
+	.home-button {
+		padding: 10px 20px;
+		font-size: 16px;
 	}
 	
 	#navigator {
 		bottom: 100px;
 	}
 	
+	.nav-btn {
+		padding: 10px 20px;
+		font-size: 15px;
+	}
+	
 	ol.katakana > li {
-		margin: 10px 0 25px 0;
+		padding: 14px 18px 14px 55px;
+		margin: 8px 0 20px 0;
+		font-size: 18px;
+	}
+	
+	ol.katakana > li:before {
+		width: 16px;
+		height: 16px;
+		left: 16px;
 	}
 	
 	ol.katakana > li:last-child {
-		margin-bottom: 40px;
+		margin-bottom: 35px;
+	}
+	
+	#progress {
+		font-size: 12pt;
+		padding: 6px 16px;
+	}
+	
+	#result {
+		font-size: 28px;
+		padding: 16px;
+	}
+	
+	body > ul > li > a,
+	#menu ul li a {
+		padding: 16px 20px;
+		font-size: 18px;
 	}
 }
 
 /* iPad Pro 13インチ 縦画面対応 */
 @media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
 	body {
-		padding: 95px 0 200px 0;
+		padding: 90px 0 190px 0;
+		font-size: 19px;
+	}
+	
+	h1 {
+		padding: 16px 36px;
+		font-size: 22pt;
+	}
+	
+	h2 {
+		padding: 15px 22px;
+		font-size: 22px;
+	}
+	
+	.home-button {
+		padding: 11px 22px;
+		font-size: 17px;
 	}
 	
 	#navigator {
 		bottom: 90px;
+	}
+	
+	.nav-btn {
+		padding: 11px 22px;
+		font-size: 15px;
+	}
+	
+	ol.katakana > li {
+		padding: 15px 19px 15px 57px;
+		margin: 9px 0 22px 0;
+		font-size: 19px;
+	}
+	
+	ol.katakana > li:before {
+		width: 17px;
+		height: 17px;
+		left: 17px;
+	}
+	
+	#progress {
+		font-size: 13pt;
+		padding: 7px 18px;
+	}
+	
+	#result {
+		font-size: 30px;
+		padding: 18px;
+	}
+	
+	body > ul > li > a,
+	#menu ul li a {
+		padding: 18px 22px;
+		font-size: 19px;
 	}
 }
