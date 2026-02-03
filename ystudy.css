@@ -3,10 +3,10 @@ body {
 	background-size: 400% 400%;
 	animation: gradientAnimation 15s ease infinite;
 	color: #333333;
-	padding: 95px 0 180px 0;
-	margin: 0% 8%;
+	padding: 80px 0 190px 0;
+	margin: 0% 6%;
 	font-family: Arial, sans-serif;
-	font-size: 22px;
+	font-size: 18px;
 }
 
 @keyframes gradientAnimation {
@@ -30,10 +30,10 @@ h1 {
 	background: linear-gradient(135deg, #0a1929 0%, #1e3a5f 50%, #0a1929 100%);
 	color: #ffffff;
 	margin: 0em;
-	padding: 18px 40px;
+	padding: 14px 32px;
 	border: none;
 	border-bottom: solid 2px #2c5282;
-	font-size: 24pt;
+	font-size: 20pt;
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 	z-index: 1000;
 	text-align: center;
@@ -49,10 +49,10 @@ h1 {
 h2 {
 	background: linear-gradient(135deg, #0f2537 0%, #1e4976 100%);
 	color: #ffffff;
-	padding: 16px 24px;
-	margin: 40px 0 20px 0;
+	padding: 13px 20px;
+	margin: 32px 0 16px 0;
 	border-radius: 8px;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	box-shadow: 0 3px 10px rgba(15, 37, 55, 0.6);
 	position: relative;
@@ -96,7 +96,7 @@ body > ul > li:hover {
 
 body > ul > li > a {
 	display: block;
-	padding: 20px 24px;
+	padding: 16px 20px;
 	color: #333333;
 	text-decoration: none;
 	font-weight: 500;
@@ -125,7 +125,7 @@ body > ul > li > a:hover {
 
 body > ul > li small {
 	color: #999999;
-	font-size: 16px;
+	font-size: 14px;
 	margin-left: 8px;
 	font-weight: normal;
 }
@@ -147,10 +147,10 @@ body > ol > li {
 body > ol > li > h2 {
 	background: linear-gradient(135deg, #0f2537 0%, #1e4976 100%);
 	color: #ffffff;
-	padding: 16px 24px;
-	margin: 40px 0 20px 0;
+	padding: 13px 20px;
+	margin: 32px 0 16px 0;
 	border-radius: 8px;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	box-shadow: 0 3px 10px rgba(15, 37, 55, 0.6);
 	position: relative;
@@ -202,7 +202,7 @@ body > ol > li > h2:hover {
 
 #menu ul li a {
 	display: block;
-	padding: 20px 24px;
+	padding: 16px 20px;
 	color: #333333;
 	text-decoration: none;
 	font-weight: 500;
@@ -214,9 +214,9 @@ body > ol > li > h2:hover {
 
 #menu ul li a::before {
 	content: "▶";
-	margin-right: 12px;
+	margin-right: 10px;
 	color: #2c5f9e;
-	font-size: 16px;
+	font-size: 14px;
 	transition: transform 0.3s ease;
 	display: inline-block;
 }
@@ -231,7 +231,7 @@ body > ol > li > h2:hover {
 
 #menu ul li span {
 	color: #999999;
-	font-size: 16px;
+	font-size: 14px;
 	margin-left: 8px;
 	font-weight: normal;
 }
@@ -266,16 +266,16 @@ body > ol > li > h2:hover {
 /* ホームボタンのスタイル */
 .home-button {
 	position: fixed;
-	top: 20px;
-	right: 20px;
+	top: 16px;
+	right: 16px;
 	z-index: 1001;
 	display: inline-block;
-	padding: 12px 24px;
+	padding: 10px 20px;
 	background: linear-gradient(135deg, #0f2537 0%, #2c5f9e 100%);
 	color: #ffffff !important;
 	text-decoration: none;
 	border-radius: 25px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
 	box-shadow: 0 3px 10px rgba(15, 37, 55, 0.6);
 	transition: all 0.3s ease;
@@ -297,7 +297,7 @@ body > ol > li > h2:hover {
 
 #navigator {
 	position: fixed;
-	bottom: 80px;
+	bottom: 90px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 90%;
@@ -315,8 +315,8 @@ body > ol > li > h2:hover {
 }
 
 .nav-btn {
-	padding: 12px 24px;
-	font-size: 16px;
+	padding: 10px 20px;
+	font-size: 15px;
 	font-weight: bold;
 	border: none;
 	border-radius: 5px;
@@ -369,15 +369,15 @@ ol.katakana {
 
 ol.katakana > li {
 	position: relative;
-	padding: 16px 20px 16px 60px;
-	margin: 10px 0 20px 0;
+	padding: 14px 18px 14px 55px;
+	margin: 8px 0 18px 0;
 	border: solid 2px #ddd;
 	border-radius: 8px;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	background-color: #f0f0f0;
-	font-size: 22px;
-	line-height: 1.6;
+	font-size: 18px;
+	line-height: 1.5;
 }
 
 ol.katakana > li:hover {
@@ -388,11 +388,11 @@ ol.katakana > li:hover {
 ol.katakana > li:before {
 	content: '';
 	position: absolute;
-	left: 18px;
+	left: 16px;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 18px;
-	height: 18px;
+	width: 16px;
+	height: 16px;
 	border: solid 2px #aaa;
 	border-radius: 50%;
 	background-color: #fff;
@@ -415,7 +415,7 @@ li.selected:before {
 	content: '✓';
 	color: white !important;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 14px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -500,9 +500,9 @@ li.wrong-answer img {
 
 #score {
 	text-align: center;
-	font-size: 20pt;
-	margin: 100px auto 20px auto;
-	padding: 40px;
+	font-size: 16pt;
+	margin: 80px auto 20px auto;
+	padding: 32px;
 	background-color: #f0f0f0;
 	border: solid 2px #666;
 	border-radius: 10px;
@@ -510,17 +510,17 @@ li.wrong-answer img {
 }
 
 .score-title {
-	font-size: 28pt;
+	font-size: 24pt;
 	font-weight: bold;
-	margin-bottom: 30px;
+	margin-bottom: 24px;
 	color: #333;
 }
 
 .progress-container {
 	width: 100%;
-	height: 80px;
+	height: 60px;
 	background-color: #e0e0e0;
-	border-radius: 40px;
+	border-radius: 30px;
 	overflow: hidden;
 	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 	position: relative;
@@ -529,15 +529,15 @@ li.wrong-answer img {
 .progress-bar {
 	height: 100%;
 	background: linear-gradient(90deg, #4CAF50 0%, #8BC34A 50%, #CDDC39 100%);
-	border-radius: 40px;
+	border-radius: 30px;
 	transition: width 1.5s ease-out;
 }
 
 .progress-text {
 	color: #333;
-	font-size: 36pt;
+	font-size: 28pt;
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 16px;
 	text-align: center;
 }
 
@@ -547,23 +547,23 @@ li.wrong-answer img {
 	left: 50%;
 	transform: translateX(-50%);
 	text-align: center;
-	font-size: 14pt;
+	font-size: 12pt;
 	color: #666;
 	font-weight: bold;
 	background-color: rgba(255, 255, 255, 0.9);
-	padding: 8px 20px;
-	border-radius: 20px;
+	padding: 6px 16px;
+	border-radius: 16px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	z-index: 1000;
 }
 
 #result {
 	text-align: center;
-	margin: 30px auto;
-	min-height: 60px;
-	font-size: 32px;
+	margin: 24px auto;
+	min-height: 50px;
+	font-size: 28px;
 	font-weight: bold;
-	padding: 20px;
+	padding: 16px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -603,128 +603,4 @@ p.e {
 	color: gray;
 	text-align: right;
 	border-bottom: dotted 1px gray;
-}
-
-/* iPad Pro 13インチ 横画面対応 */
-@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
-	body {
-		padding: 85px 0 200px 0;
-		font-size: 18px;
-	}
-	
-	h1 {
-		padding: 14px 32px;
-		font-size: 20pt;
-	}
-	
-	h2 {
-		padding: 14px 20px;
-		font-size: 20px;
-	}
-	
-	.home-button {
-		padding: 10px 20px;
-		font-size: 16px;
-	}
-	
-	#navigator {
-		bottom: 100px;
-	}
-	
-	.nav-btn {
-		padding: 10px 20px;
-		font-size: 15px;
-	}
-	
-	ol.katakana > li {
-		padding: 14px 18px 14px 55px;
-		margin: 8px 0 20px 0;
-		font-size: 18px;
-	}
-	
-	ol.katakana > li:before {
-		width: 16px;
-		height: 16px;
-		left: 16px;
-	}
-	
-	ol.katakana > li:last-child {
-		margin-bottom: 35px;
-	}
-	
-	#progress {
-		font-size: 12pt;
-		padding: 6px 16px;
-	}
-	
-	#result {
-		font-size: 28px;
-		padding: 16px;
-	}
-	
-	body > ul > li > a,
-	#menu ul li a {
-		padding: 16px 20px;
-		font-size: 18px;
-	}
-}
-
-/* iPad Pro 13インチ 縦画面対応 */
-@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
-	body {
-		padding: 90px 0 190px 0;
-		font-size: 19px;
-	}
-	
-	h1 {
-		padding: 16px 36px;
-		font-size: 22pt;
-	}
-	
-	h2 {
-		padding: 15px 22px;
-		font-size: 22px;
-	}
-	
-	.home-button {
-		padding: 11px 22px;
-		font-size: 17px;
-	}
-	
-	#navigator {
-		bottom: 90px;
-	}
-	
-	.nav-btn {
-		padding: 11px 22px;
-		font-size: 15px;
-	}
-	
-	ol.katakana > li {
-		padding: 15px 19px 15px 57px;
-		margin: 9px 0 22px 0;
-		font-size: 19px;
-	}
-	
-	ol.katakana > li:before {
-		width: 17px;
-		height: 17px;
-		left: 17px;
-	}
-	
-	#progress {
-		font-size: 13pt;
-		padding: 7px 18px;
-	}
-	
-	#result {
-		font-size: 30px;
-		padding: 18px;
-	}
-	
-	body > ul > li > a,
-	#menu ul li a {
-		padding: 18px 22px;
-		font-size: 19px;
-	}
 }
