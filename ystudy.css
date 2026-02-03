@@ -3,7 +3,7 @@ body {
 	background-size: 400% 400%;
 	animation: gradientAnimation 15s ease infinite;
 	color: #333333;
-	padding: 95px 0 0 0;
+	padding: 95px 0 180px 0;
 	margin: 0% 8%;
 	font-family: Arial, sans-serif;
 	font-size: 22px;
@@ -370,7 +370,7 @@ ol.katakana {
 ol.katakana > li {
 	position: relative;
 	padding: 16px 20px 16px 60px;
-	margin: 10px 0;
+	margin: 10px 0 20px 0;
 	border: solid 2px #ddd;
 	border-radius: 8px;
 	cursor: pointer;
@@ -603,4 +603,34 @@ p.e {
 	color: gray;
 	text-align: right;
 	border-bottom: dotted 1px gray;
+}
+
+/* iPad Pro 13インチ 横画面対応 */
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+	body {
+		padding: 95px 0 220px 0;
+	}
+	
+	#navigator {
+		bottom: 100px;
+	}
+	
+	ol.katakana > li {
+		margin: 10px 0 25px 0;
+	}
+	
+	ol.katakana > li:last-child {
+		margin-bottom: 40px;
+	}
+}
+
+/* iPad Pro 13インチ 縦画面対応 */
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+	body {
+		padding: 95px 0 200px 0;
+	}
+	
+	#navigator {
+		bottom: 90px;
+	}
 }
