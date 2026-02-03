@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="ystudy.css" />
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="ystudy.js"></script>
+<title>さわって学ぶLinux入門テキスト(選択問題のみ)</title>
+<meta name="description" content="さわって学ぶLinux入門テキスト(選択問題のみ)" />
+</head>
+<body>
+<h1>さわって学ぶLinux入門テキスト(選択問題のみ)
+	<a href="./index.html" class="home-button">ホーム</a>
+</h1>
+
+<ol>
+	<li><h2>第1章 Linuxとは</h2>
+	<div>
+	<ol>
+		<li><p class="q">アプリケーションソフトウェアとハードウェアの間で動く基本ソフトウェアの名称として正しいものを選べ。</p>
+			<ol class="sa">
+				<li>ミドルウェア</li>
+				<li class="c">OS</li>
+				<li>OSS</li>
+				<li>シェアウェア</li>
+			</ol>
+			<p class="e">練習問題1章1 問1</p>
+		</li>
+		<li><p class="q">基本ソフトウェアの中心となるプログラムでLinuxの本体といえるプログラムの名称として正しいものはどれか。</p>
+			<ol class="sa">
+				<li>シェル</li>
+				<li>エディタ</li>
+				<li class="c">カーネル</li>
+				<li>パイプ</li>
+			</ol>
+			<p class="e">練習問題1章1 問2</p>
+		</li>
+		<li><p class="q">ユーザーのリクエストに対して答えるコンピュータの名称として正しいものはどれか。</p>
+			<ol class="sa">
+				<li class="c">サーバー</li>
+				<li>クライアント</li>
+				<li>プロバイダ</li>
+				<li>オーダー</li>
+			</ol>
+			<p class="e">練習問題1章1 問3</p>
+		</li>
+		<li><p class="q">Linuxのように、改変や再配布が自由でソースコードが公開されているソフトウェアの名称として正しいものはどれか。</p>
+			<ol class="sa">
+				<li>BIOS</li>
+				<li>UEFI</li>
+				<li>ファームウェア</li>
+				<li class="c">OSS</li>
+			</ol>
+			<p class="e">練習問題1章1 問4</p>
+		</li>
+		<li><p class="q">この中からLinuxのディストリビューションではないものを選べ。</p>
+			<ol class="sa">
+				<li>CentOS</li>
+				<li class="c">bash</li>
+				<li>Ubuntu</li>
+				<li>Slackware</li>
+			</ol>
+			<p class="e">練習問題1章1 問5</p>
+		</li>
+		<li><p class="q">システムを管理する権限を持つユーザーとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>master</li>
+				<li>main</li>
+				<li class="c">root</li>
+				<li>super</li>
+			</ol>
+			<p class="e">練習問題1章2 問1</p>
+		</li>
+		<li><p class="q">特に設定を変えない状態で、一般ユーザーのプロンプトの最後に表示される記号として正しいものを選べ。</p>
+			<ol class="sa">
+				<li>&amp;</li>
+				<li>=</li>
+				<li>#</li>
+				<li class="c">$</li>
+			</ol>
+			<p class="e">練習問題1章2 問2</p>
+		</li>
+		<li><p class="q">cal -m 7 2020 と入力するとカレンダーが表示される。この-mが表すものとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>パラメータ</li>
+				<li class="c">オプション</li>
+				<li>引数</li>
+				<li>定数</li>
+			</ol>
+			<p class="e">練習問題1章2 問3</p>
+		</li>
+		<li><p class="q">システムを完全に終了させるためにはshutdownコマンドを使う。システムを完全に終了させるためにコマンドの後ろに指定するものとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>-r</li>
+				<li>-c</li>
+				<li>-k</li>
+				<li class="c">-h</li>
+			</ol>
+			<p class="e">練習問題1章2 問5</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第2章 ディレクトリとファイル</h2>
+	<div>
+	<ol>
+		<li><p class="q">現在のディレクトリの名称として正しいものを選べ。</p>
+			<ol class="sa">
+				<li>ホームディレクトリ</li>
+				<li>サブディレクトリ</li>
+				<li class="c">カレントディレクトリ</li>
+				<li>ルートディレクトリ</li>
+			</ol>
+			<p class="e">練習問題2章1 問1</p>
+		</li>
+		<li><p class="q">今いるディレクトリから2つ上のディレクトリに移動するときに使用する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li class="c">cd ../..</li>
+				<li>cd /../..</li>
+				<li>dc ././</li>
+				<li>cd ･･･.</li>
+			</ol>
+			<p class="e">練習問題2章1 問2</p>
+		</li>
+		<li><p class="q">Linuxシステムを動かすためには様々なファイルが必要である。これらのファイルは分類され、特定のディレクトリに保存されている。設定ファイルが入るディレクトリの名称として正しいものを選べ。</p>
+			<ol class="sa">
+				<li class="c">/etc</li>
+				<li>/bin</li>
+				<li>/dev</li>
+				<li>/sbin</li>
+			</ol>
+			<p class="e">練習問題2章1 問3</p>
+		</li>
+		<li><p class="q">今いるディレクトリから空のaaaディレクトリを削除するときに使用する正しいコマンドを2つ選べ。</p>
+			<ol class="ma">
+				<li>del aaa</li>
+				<li>rmdir -r /aaa</li>
+				<li class="c">rmdir aaa</li>
+				<li class="c">rm -r ./aaa</li>
+			</ol>
+			<p class="e">練習問題2章1 問4</p>
+		</li>
+		<li><p class="q">今いるディレクトリの下にworkディレクトリ、さらにその下にdocディレクトリを作成するときに使用する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>mkdir -p /work/doc</li>
+				<li class="c">mkdir -p work/doc</li>
+				<li>mkdir -d work doc</li>
+				<li>rmdir -d work/doc</li>
+			</ol>
+			<p class="e">練習問題2章1 問5</p>
+		</li>
+		<li><p class="q">test1ファイルをカレントディレクトリ下のworkサブディレクトリにコピーする正しいコマンドを2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">cp test1 ./work</li>
+				<li>cp work1 test1</li>
+				<li>copy test1 work</li>
+				<li class="c">cp test1 work</li>
+			</ol>
+			<p class="e">練習問題2章2 問1</p>
+		</li>
+		<li><p class="q">docディレクトリをworkサブディレクトリにコピーする正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>cp -D doc /work</li>
+				<li class="c">cp -r doc work</li>
+				<li>copy -r doc work</li>
+				<li>cp -b doc work</li>
+			</ol>
+			<p class="e">練習問題2章2 問2</p>
+		</li>
+		<li><p class="q">ファイルを日時の降順に詳細表示する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li class="c">ls -lt</li>
+				<li>ls -ld</li>
+				<li>ls -a-t</li>
+				<li>ls -al</li>
+			</ol>
+			<p class="e">練習問題2章2 問3</p>
+		</li>
+		<li><p class="q">aaaファイルの名前をbbbに変更する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>rn aaa bbb</li>
+				<li class="c">mv aaa bbb</li>
+				<li>mv -f aaa bbb</li>
+				<li>rm aaa bbb</li>
+			</ol>
+			<p class="e">練習問題2章2 問4</p>
+		</li>
+		<li><p class="q">aaaファイルを、確認メッセージを表示してから削除する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>mv -i aaa</li>
+				<li>del -m aaa</li>
+				<li class="c">rm -i aaa</li>
+				<li>rmdir -i aaa</li>
+			</ol>
+			<p class="e">練習問題2章2 問5</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第3章 テキストエディタとテキストファイル</h2>
+	<div>
+	<ol>
+		<li><p class="q">入力モードにするキーとして正しいコマンドを2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">a</li>
+				<li>X</li>
+				<li class="c">i</li>
+				<li>d</li>
+			</ol>
+			<p class="e">練習問題3章1 問2</p>
+		</li>
+		<li><p class="q">ファイルを保存してから終了するときに使用する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>:w!</li>
+				<li>:W</li>
+				<li>:q!</li>
+				<li class="c">ZZ</li>
+			</ol>
+			<p class="e">練習問題3章1 問3</p>
+		</li>
+		<li><p class="q">カーソルのある行から2行分をコピーする正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>yy</li>
+				<li>dd</li>
+				<li class="c">2yy</li>
+				<li>2yw</li>
+			</ol>
+			<p class="e">練習問題3章1 問4</p>
+		</li>
+		<li><p class="q">testという文字をカーソル位置からファイルの先頭方向に検索する。( )に入れる正しいコマンドを選べ。<br />
+			<code>( ) test</code></p>
+			<ol class="sa">
+				<li class="c">?</li>
+				<li>:</li>
+				<li>/</li>
+				<li>!</li>
+			</ol>
+			<p class="e">練習問題3章1 問5</p>
+		</li>
+		<li><p class="q">ファイルの内容が1画面で収まらない場合、1画面ずつ表示する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>cat</li>
+				<li>pager</li>
+				<li class="c">less</li>
+				<li>scroll</li>
+			</ol>
+			<p class="e">練習問題3章2 問1</p>
+		</li>
+		<li><p class="q">ファイルの先頭から10行分だけ表示する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>top</li>
+				<li class="c">head</li>
+				<li>lead</li>
+				<li>front</li>
+			</ol>
+			<p class="e">練習問題3章2 問2</p>
+		</li>
+		<li><p class="q">bunsyo1.txtファイル内から大文字小文字に関係なく文字列「apple」を検索する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>find -i apple bunsyo1.txt</li>
+				<li>search -n apple bunsyo1.txt</li>
+				<li class="c">grep -i apple bunsyo1.txt</li>
+				<li>grep -n bunsyo1.txt apple</li>
+			</ol>
+			<p class="e">練習問題3章2 問3</p>
+		</li>
+		<li><p class="q">カレントディレクトリにある「test」ではじまるファイル名のファイルを検索する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>find test~</li>
+				<li>grep "test*"</li>
+				<li>search . test~</li>
+				<li class="c">find -name "test*"</li>
+			</ol>
+			<p class="e">練習問題3章2 問4</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第4章 ユーザ管理とファイルのアクセス権</h2>
+	<div>
+	<ol>
+		<li><p class="q">rootユーザーに切り替える正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>root</li>
+				<li>ch</li>
+				<li class="c">su</li>
+				<li>switch</li>
+			</ol>
+			<p class="e">練習問題4章1 問1</p>
+		</li>
+		<li><p class="q">パスワードを設定する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>password</li>
+				<li class="c">passwd</li>
+				<li>pwd</li>
+				<li>passwds</li>
+			</ol>
+			<p class="e">練習問題4章1 問2</p>
+		</li>
+		<li><p class="q">ユーザーの設定を変更したり、新しいユーザーを追加したときなどに、UIDやGID、グループ名などの情報を確認するファイルを選べ。</p>
+			<ol class="sa">
+				<li>/etc/passwds</li>
+				<li>/etc/password</li>
+				<li>/etc/grops</li>
+				<li class="c">/etc/passwd</li>
+			</ol>
+			<p class="e">練習問題4章1 問3</p>
+		</li>
+		<li><p class="q">ユーザーをホームディレクトリごと削除する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>userdel -d</li>
+				<li>userdel -R</li>
+				<li>deluse -R</li>
+				<li class="c">userdel -r</li>
+			</ol>
+			<p class="e">練習問題4章1 問4</p>
+		</li>
+		<li><p class="q">testユーザーにsakuraというセカンダリグループを設定する場合に使用する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li class="c">usermod -G sakura test</li>
+				<li>changeuser -g sakura test</li>
+				<li>changemod -g test sakura</li>
+				<li>usermod -g test sakura</li>
+			</ol>
+			<p class="e">練習問題4章1 問5</p>
+		</li>
+		<li><p class="q">ファイルの所有者を変更する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>chmod</li>
+				<li>chuser</li>
+				<li>su</li>
+				<li class="c">chown</li>
+			</ol>
+			<p class="e">練習問題4章2 問1</p>
+		</li>
+		<li><p class="q">ディレクトリの所有グループを変更する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>chgroup</li>
+				<li class="c">chgrp</li>
+				<li>chgroups</li>
+				<li>chmode</li>
+			</ol>
+			<p class="e">練習問題4章2 問2</p>
+		</li>
+		<li><p class="q">アクセス権rwxrw---xを表す数字として正しいものを選べ。</p>
+			<ol class="sa">
+				<li class="c">761</li>
+				<li>753</li>
+				<li>643</li>
+				<li>642</li>
+			</ol>
+			<p class="e">練習問題4章2 問3</p>
+		</li>
+		<li><p class="q">pdir0のアクセス権をrw-r-xr--に変更する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>chgrp 563 pdir0</li>
+				<li>chdir 654 pdir0</li>
+				<li>chown 564 pdir0</li>
+				<li class="c">chmod 654 pdir0</li>
+			</ol>
+			<p class="e">練習問題4章2 問4</p>
+		</li>
+		<li><p class="q">samp1.txtファイルの所有者から書き込み権を削除する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>changeuser g-r samp1.txt</li>
+				<li>usermod g-x samp1.txt</li>
+				<li class="c">chmod u-w samp1.txt</li>
+				<li>chown u-w samp1.txt</li>
+			</ol>
+			<p class="e">練習問題4章2 問5</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第5章 シェルと便利な機能</h2>
+	<div>
+	<ol>
+		<li><p class="q">今まで入力したコマンド履歴を一覧表示する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li class="c">history</li>
+				<li>keylog</li>
+				<li>ls</li>
+				<li>cat</li>
+			</ol>
+			<p class="e">練習問題5章1 問1</p>
+		</li>
+		<li><p class="q">あるコマンドのオプション設定が複雑なので、簡単に入力できるように別の名前を付けた。別名をつけるための正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>sname</li>
+				<li class="c">alias</li>
+				<li>unalias</li>
+				<li>aname</li>
+			</ol>
+			<p class="e">練習問題5章1 問2</p>
+		</li>
+		<li><p class="q">2つのコマンドをつないで実行する記号として正しいものを選べ。</p>
+			<ol class="sa">
+				<li>\</li>
+				<li>^</li>
+				<li class="c">｜</li>
+				<li>-</li>
+			</ol>
+			<p class="e">練習問題5章1 問3</p>
+		</li>
+		<li><p class="q">lsの結果をtest4ファイルに出力する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>ls | test4</li>
+				<li>ls -a test4</li>
+				<li>ls &lt; test4</li>
+				<li class="c">ls &gt; test4</li>
+			</ol>
+			<p class="e">練習問題5章1 問4</p>
+		</li>
+		<li><p class="q">結果をtest5ファイルに、エラーをerror5ファイルに出力する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li class="c">cat test0 test99 &gt; test5 2&gt; error5</li>
+				<li>cat test0 test99 &lt; test5 &gt; error5</li>
+				<li>cat test0 test99 &gt;&gt; test5 1&gt;2&amp; error5</li>
+				<li>cat test0 test99 &gt; test5 &gt; error5</li>
+			</ol>
+			<p class="e">練習問題5章1 問5</p>
+		</li>
+		<li><p class="q">変数Linuc1の内容を表示する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>echo Linuc1</li>
+				<li class="c">echo $Linuc1</li>
+				<li>cat Linuc1</li>
+				<li>Linuc1='CentOS Ubuntu'</li>
+			</ol>
+			<p class="e">練習問題5章2 問1</p>
+		</li>
+		<li><p class="q">catコマンドの種類を確認する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li class="c">type cat</li>
+				<li>type $cat</li>
+				<li>which cat</li>
+				<li>set cat</li>
+			</ol>
+			<p class="e">練習問題5章2 問3</p>
+		</li>
+		<li><p class="q">シェル変数や環境変数をすべて表示する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>env</li>
+				<li>ls | less</li>
+				<li>cat env</li>
+				<li class="c">set</li>
+			</ol>
+			<p class="e">練習問題5章2 問5</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第6章 プロセスとジョブ</h2>
+	<div>
+	<ol>
+		<li><p class="q">フォアグラウンドジョブを強制終了するキーとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>Ctrl + Z</li>
+				<li class="c">Ctrl + C</li>
+				<li>Ctrl + L</li>
+				<li>Ctrl + A</li>
+			</ol>
+			<p class="e">練習問題6章 問1</p>
+		</li>
+		<li><p class="q">プロセスやリソースをリアルタイムで表示する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li class="c">top</li>
+				<li>task</li>
+				<li>ps</li>
+				<li>free</li>
+			</ol>
+			<p class="e">練習問題6章 問2</p>
+		</li>
+		<li><p class="q">プロセスID3000番のプロセスを強制的に終了する正しい命令として正しいものを選べ。</p>
+			<ol class="sa">
+				<li>kill -k 3000</li>
+				<li>kill 35 PID3000</li>
+				<li>kill -SIG 3000</li>
+				<li class="c">kill -KILL 3000</li>
+			</ol>
+			<p class="e">練習問題6章 問3</p>
+		</li>
+		<li><p class="q">ジョブ番号が5のバックグラウンドジョブをフォアグラウンドで実行する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>fg &amp;5</li>
+				<li class="c">fg 5</li>
+				<li>fgjob 5</li>
+				<li>fj 5</li>
+			</ol>
+			<p class="e">練習問題6章 問4</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第7章 ファイルシステムとインストール</h2>
+	<div>
+	<ol>
+		<li><p class="q">ファイルシステムを作成する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>fdisk</li>
+				<li class="c">mkfs</li>
+				<li>mount</li>
+				<li>fd</li>
+			</ol>
+			<p class="e">練習問題7章1 問1</p>
+		</li>
+		<li><p class="q">ファイルシステムとして誤っているものを選べ。</p>
+			<ol class="sa">
+				<li>ext4</li>
+				<li class="c">eTAF</li>
+				<li>xfs</li>
+				<li>Btrfs</li>
+			</ol>
+			<p class="e">練習問題7章1 問4</p>
+		</li>
+		<li><p class="q">systemdではないシステムで起動時にカーネルが行った処理を確認する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li class="c">dmesg</li>
+				<li>emesg</li>
+				<li>bmesg</li>
+				<li>cmesg</li>
+			</ol>
+			<p class="e">練習問題7章1 問5</p>
+		</li>
+		<li><p class="q">アーカイブファイルを作成する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>ta</li>
+				<li>archive</li>
+				<li class="c">tar</li>
+				<li>af</li>
+			</ol>
+			<p class="e">練習問題7章2 問1</p>
+		</li>
+		<li><p class="q">練習問題7章2 問1で選択したアーカイブファイルを作成するコマンドで、アーカイブファイルを新規作成する場合のオプションの組み合わせで正しいものを選べ。</p>
+			<ol class="sa">
+				<li class="c">-cf</li>
+				<li>-rf</li>
+				<li>-tf</li>
+				<li>-xf</li>
+			</ol>
+			<p class="e">練習問題7章2 問2</p>
+		</li>
+		<li><p class="q">アーカイブファイルを展開するコマンドのオプションとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>-cf</li>
+				<li>-rf</li>
+				<li>-tf</li>
+				<li class="c">-xf</li>
+			</ol>
+			<p class="e">練習問題7章2 問3</p>
+		</li>
+		<li><p class="q">gzipコマンドで圧縮ファイルを作成するとファイル名につく拡張子として正しいものを選べ。</p>
+			<ol class="sa">
+				<li class="c">gz</li>
+				<li>gzip</li>
+				<li>zip</li>
+				<li>bz2</li>
+			</ol>
+			<p class="e">練習問題7章2 問4</p>
+		</li>
+		<li><p class="q">シンボリックリンクを作成するコマンドとオプションの正しい組み合わせを選べ。</p>
+			<ol class="sa">
+				<li>lnk -s</li>
+				<li class="c">ln -s</li>
+				<li>link -sy</li>
+				<li>rn -sy</li>
+			</ol>
+			<p class="e">練習問題7章2 問5</p>
+		</li>
+		<li><p class="q">Debian系でパッケージを自動的にインストールする管理ツールとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>dpkg</li>
+				<li>yum</li>
+				<li class="c">apt</li>
+				<li>rpm</li>
+			</ol>
+			<p class="e">練習問題7章3 問1</p>
+		</li>
+		<li><p class="q">RPM系でパッケージを自動的にインストールする管理ツールとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>dpkg</li>
+				<li class="c">yum</li>
+				<li>apt</li>
+				<li>rpm</li>
+			</ol>
+			<p class="e">練習問題7章3 問2</p>
+		</li>
+		<li><p class="q">Debian系でパッケージを選んでインストールする正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li class="c">dpkg</li>
+				<li>yum</li>
+				<li>apt</li>
+				<li>rpm</li>
+			</ol>
+			<p class="e">練習問題7章3 問3</p>
+		</li>
+		<li><p class="q">rpmコマンドでインストール済みのパッケージを表示する正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>rpm -e</li>
+				<li>rpm -ivh</li>
+				<li>rpm -Fvh</li>
+				<li class="c">rpm -qa</li>
+			</ol>
+			<p class="e">練習問題7章3 問4</p>
+		</li>
+		<li><p class="q">yumコマンドでシステムにインストール済みのパッケージをすべて最新にする正しいコマンドを選べ。</p>
+			<ol class="sa">
+				<li>yum ug</li>
+				<li class="c">yum update</li>
+				<li>yum -u</li>
+				<li>yum check-update</li>
+			</ol>
+			<p class="e">練習問題7章3 問5</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第8章 ネットワーク基礎</h2>
+	<div>
+	<ol>
+		<li><p class="q">TCPプロトコルの説明として正しいものを選べ。</p>
+			<ol class="sa">
+				<li>エラー通信や問い合わせを行う</li>
+				<li class="c">コネクション型で信頼性が必要なデータ通信で利用される</li>
+				<li>コネクション型なので通信が早い</li>
+				<li>メールの送信を行う</li>
+			</ol>
+			<p class="e">練習問題8章1 問1</p>
+		</li>
+		<li><p class="q">IPv4アドレスは32ビットだが、IPv6アドレスのビット数として正しいものを選べ。</p>
+			<ol class="sa">
+				<li class="c">128ビット</li>
+				<li>126ビット</li>
+				<li>64ビット</li>
+				<li>48ビット</li>
+			</ol>
+			<p class="e">練習問題8章1 問2</p>
+		</li>
+		<li><p class="q">ドメイン名とIPアドレスの対応を調べる仕組みとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>ICMP</li>
+				<li>SMTP</li>
+				<li>DHCP</li>
+				<li class="c">DNS</li>
+			</ol>
+			<p class="e">練習問題8章1 問3</p>
+		</li>
+		<li><p class="q">IPアドレスのネットワーク部が29ビットでホスト部が3ビットの場合、ホストにIPアドレスを割り振られる台数として正しいものを選べ。</p>
+			<ol class="sa">
+				<li>8</li>
+				<li class="c">6</li>
+				<li>4</li>
+				<li>3</li>
+			</ol>
+			<p class="e">練習問題8章1 問4</p>
+		</li>
+		<li><p class="q">IPアドレスのネットワーク部が29ビットでホスト部が3ビットの場合、プレフィックス表記にした時のものとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>255.255.255.248</li>
+				<li>192.168.1.128/3</li>
+				<li class="c">192.168.1.128/29</li>
+				<li>2001:0db8:1234:5678:90ab:cdef:0000:0001</li>
+			</ol>
+			<p class="e">練習問題8章1 問5</p>
+		</li>
+		<li><p class="q">指定したアドレスやホストの応答を確かめることができるICMPプロトコルを利用したコマンドとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>netstat</li>
+				<li>ifconfig</li>
+				<li>route</li>
+				<li class="c">ping</li>
+			</ol>
+			<p class="e">練習問題8章2 問1</p>
+		</li>
+		<li><p class="q">ホスト名を表示するコマンドとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>hosts</li>
+				<li>ip hostname</li>
+				<li class="c">hostname</li>
+				<li>hostnames</li>
+			</ol>
+			<p class="e">練習問題8章2 問2</p>
+		</li>
+		<li><p class="q">ホスト名が書かれている設定ファイルとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li class="c">/etc/hostname</li>
+				<li>/etc/hostnames</li>
+				<li>/etc/hosts</li>
+				<li>/etc/host</li>
+			</ol>
+			<p class="e">練習問題8章2 問3</p>
+		</li>
+		<li><p class="q">サービスとして利用するポート番号、プロトコルが書かれているファイルとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li>/etc/ports</li>
+				<li>/etc/port</li>
+				<li class="c">/etc/services</li>
+				<li>/etc/service</li>
+			</ol>
+			<p class="e">練習問題8章2 問4</p>
+		</li>
+		<li><p class="q">「 」addr showと入力すると、インタフェースの情報やIPアドレスが表示される。「 」に入るコマンドとして正しいものを選べ。</p>
+			<ol class="sa">
+				<li class="c">ip</li>
+				<li>ifconfig</li>
+				<li>info</li>
+				<li>route</li>
+			</ol>
+			<p class="e">練習問題8章2 問5</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+</ol>
+</body>
+</html>

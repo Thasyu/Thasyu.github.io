@@ -1,0 +1,2039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="ystudy.css" />
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="ystudy.js"></script>
+<title>オラクルマスター教科書 Bronze DBA Oracle Database Fundamentals</title>
+<meta name="description" content="オラクルマスター教科書 Bronze DBA Oracle Database Fundamentals" />
+</head>
+<body>
+<h1>オラクルマスター教科書 Bronze DBA Oracle Database Fundamentals
+	<a href="./index.html" class="home-button">ホーム</a>
+</h1>
+
+<ol>
+	<li><h2>第1章 Oracleデータベース管理の概要</h2>
+	<div>
+	<ol>
+		<li><p class="q">リレーショナルデータベース用語の説明として正しいものをすべて選べ。</p>
+			<ol class="ma">
+				<li>表の列は1件のデータに対応する</li>
+				<li>表は、物理的な1つのOS上のファイルである</li>
+				<li>表からデータを取得するには、取得したいデータが表の何番目にあるかを指定する必要がある</li>
+				<li class="c">表のデータを変更するにはDMLを使用する</li>
+			</ol>
+			<p class="e">第1章 1</p>
+		</li>
+		<li><p class="q">次の中から正しい説明を選べ。</p>
+			<ol class="sa">
+				<li>DMLとは、Data Model Languageの略で、DESIGN、DELETEを含むデータモデリング言語が分類される</li>
+				<li>DDLとは、Data Definition Languageの略で、CREATE、INSERTを含むデータ定義言語が分類される</li>
+				<li>トランザクション制御は、INSERT、UPDATE、DELETEを含むトランザクションに関する言語が分類される</li>
+				<li class="c">DCLとは、Data Control Languageの略で、GRANT、REVOKEを含むデータ制御言語が分類される</li>
+			</ol>
+			<p class="e">第1章 2</p>
+		</li>
+		<li><p class="q">SQLコマンドと分類の正しい組み合わせはどれか、4つ選べ。</p>
+			<ol class="ma">
+				<li class="c">DROP:データ定義</li>
+				<li class="c">TRUNCATE:データ定義</li>
+				<li class="c">COMMIT:トランザクション制御</li>
+				<li class="c">ROLLBACK:トランザクション制御</li>
+				<li>ALTER:データ制御</li>
+				<li>GRANT:データ定義</li>
+			</ol>
+			<p class="e">第1章 3</p>
+		</li>
+		<li><p class="q">次の中から管理ツールとその役割について正しい組み合わせを1つ選べ。<br />
+			(1) Enterprise Manager Database Express<br />
+			(2) Enterprise Manager Cloud Control<br />
+			(3) Database Configuration Assistant<br />
+			(4) Oracle Secure Backup<br />
+			<br />
+			(ア) テープバックアップ管理を提供する<br />
+			(イ) 既存のデータベースを新しいリリースのOracleにアップグレードする<br />
+			(ウ) 中央コンソールから1つのデータベースを管理する<br />
+			(エ) 複数のデータベースを管理する</p>
+			<ol class="sa">
+				<li>(1) - (エ)</li>
+				<li>(2) - (ウ)</li>
+				<li>(3) - (イ)</li>
+				<li class="c">(4) - (ア)</li>
+			</ol>
+			<p class="e">第1章 4</p>
+		</li>
+		<li><p class="q">Oracleデータベースの管理に必要なツールとその用途について、正しい組み合わせはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li>Oracle Net Manager : リスナーの起動や停止を行うときに使用する</li>
+				<li class="c">Oracle Data Pump : スキーマ単位でデータをエクスポート、インポートするときに使用する</li>
+				<li>SQL*Loader : SQL文を発行するときに使用する</li>
+				<li>Database Configuration Assistant : データベースをアップグレードするときに使用する</li>
+				<li class="c">Recovery Manager : データベースをバックアップするときに使用する</li>
+			</ol>
+			<p class="e">第1章 5</p>
+		</li>
+		<li><p class="q">Oracleデータベースの管理に必要なツールとその説明について、正しい組み合わせはどれか。</p>
+			<ol class="sa">
+				<li>Enterprise Manager Database Express : 複数のデータベースを一元管理するときに使用する</li>
+				<li class="c">Enterprise Manager Cloud Control : GUIでインスタンスの起動やデータベースのバックアップの取得を行える</li>
+				<li>Recovery Manager : リカバリするときに使用するツールだが、バックアップの取得は行えない</li>
+				<li>Database Upgrade Assistant : 任意のリリースから任意のリリースに直接アップグレードできる</li>
+			</ol>
+			<p class="e">第1章 6</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第2章 Oracleソフトウェアのインストールとデータベースの作成</h2>
+	<div>
+	<ol>
+		<li><p class="q">環境変数ORACLE_BASEについて正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li class="c">Oracle関連ファイルのベースディレクトリである</li>
+				<li>Oracleソフトウェアをインストールするディレクトリである</li>
+				<li>Oracleデータベースファイルを配置するディレクトリである</li>
+				<li>インスタンスの識別子を指定する</li>
+			</ol>
+			<p class="e">第2章 1</p>
+		</li>
+		<li><p class="q">環境変数ORACLE_HOMEについて正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>Oracleデータベースファイルを配置するディレクトリである</li>
+				<li class="c">Oracleソフトウェアをインストールするディレクトリである</li>
+				<li>Oracleソフトウェアのベースディレクトリである</li>
+				<li>設定は任意である</li>
+			</ol>
+			<p class="e">第2章 2</p>
+		</li>
+		<li><p class="q">環境変数について、正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>Linuxにおいて、環境変数は事前に設定しておかなければならない</li>
+				<li>環境変数はOUIの実行時に設定されるので、すべてのOSにおいて事前に設定してはいけない</li>
+				<li class="c">Linuxにおいて、環境変数は事前に設定しておいたほうが良い</li>
+				<li>Linuxにおいて、環境変数は事前に設定しておくとエラーになる</li>
+			</ol>
+			<p class="e">第2章 3</p>
+		</li>
+		<li><p class="q">環境変数ORACLE_SIDについて正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>Oracleデータベースファイルの名前である</li>
+				<li class="c">Oracleインスタンスの名前である</li>
+				<li>Oracleシステム管理者の識別子である</li>
+				<li>設定は任意である</li>
+			</ol>
+			<p class="e">第2章 4</p>
+		</li>
+		<li><p class="q">テンプレートの作成方法について正しい説明を3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">[既存のデータベースを使用(構造のみ)]オプションは、元のデータベースと同様の構造にするが、そのデータは含めないで新しいデータベースを作成する場合に使用する</li>
+				<li class="c">[既存のデータベースを使用(データ及び構造)]オプションでは、ユーザー定義スキーマとそのデータがテンプレートに含まれる</li>
+				<li class="c">[既存のデータベースを使用(構造のみ)]オプションでは、データベースオプション、表領域、データファイル、初期化パラメータファイルなどの構造情報が含まれる</li>
+				<li>[既存のデータベースを使用(データ及び構造)]オプションでは、元のデータベースは、ローカルにあってもリモートにあっても構わない</li>
+			</ol>
+			<p class="e">第2章 5</p>
+		</li>
+		<li><p class="q">DBCAでできることを3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">データベースの作成</li>
+				<li class="c">データベースの削除</li>
+				<li class="c">既存のデータベースのオプション構成の変更</li>
+				<li>データベースのバージョンアップ</li>
+			</ol>
+			<p class="e">第2章 6</p>
+		</li>
+		<li><p class="q">データベーステンプレートについて、正しい説明を2つ選べ。</p>
+			<ol class="ma">
+				<li>OUIを使用するとテンプレートの作成および管理ができる</li>
+				<li class="c">テンプレートは、データベースの作成に必要な情報をXMLファイルとして保存する</li>
+				<li class="c">シードテンプレートには、データファイルが含まれている</li>
+				<li>非シードテンプレートには、データファイルが含まれている</li>
+			</ol>
+			<p class="e">第2章 7</p>
+		</li>
+		<li><p class="q">データベーステンプレートについて、正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>非シードテンプレートを使用すれば、既存のデータベースのクローン(複製)を作成できるため、時間を節約できる</li>
+				<li>あるマシンから別のマシンにテンプレートをコピーすることはできない</li>
+				<li>データベースオプションは、テンプレートの設定から変更できない</li>
+				<li class="c">テンプレートを使用すると、データベースを定義する必要がない</li>
+			</ol>
+			<p class="e">第2章 8</p>
+		</li>
+		<li><p class="q">データベースのアップグレードを行うツールを1つ選べ。</p>
+			<ol class="sa">
+				<li>Oracle Database Configuration Assistant</li>
+				<li class="c">Database Upgrade Assistant</li>
+				<li>Oracle Net Manager</li>
+				<li>Oracle Enterprise Manager</li>
+			</ol>
+			<p class="e">第2章 9</p>
+		</li>
+		<li><p class="q">そのマシンにインストールされているOracle製品の記録が保存されているディレクトリを何と呼ぶか。</p>
+			<ol class="ma">
+				<li>ルートディレクトリ</li>
+				<li>ホームディレクトリ</li>
+				<li>ソースディレクトリ</li>
+				<li class="c">インベントリディレクトリ</li>
+			</ol>
+			<p class="e">第2章 10</p>
+		</li>
+		<li><p class="q">同一データベースサーバー上のORACLE_HOMEとデータベースの関係について、正しいものを2つ選べ。</p>
+			<ol class="ma">
+				<li>1つのORACLE_HOMEにOracle Database 18cのソフトウェアとOracle Database 19cのソフトウェアをインストールできる</li>
+				<li class="c">同じリリースのORACLE_HOMEを複数作成できる</li>
+				<li class="c">異なるリリースのORACLE_HOMEを複数作成できる</li>
+				<li>1つのORACLE_HOMEからリリースの異なる複数のデータベースを作成できる</li>
+			</ol>
+			<p class="e">第2章 11</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第3章 OracleEnterpriceManagerDatabaseExpressおよびSQL管理ツールの使用</h2>
+	<div>
+	<ol>
+		<li><p class="q">EM Expressでできることはどれか、2つ選べ。</p>
+			<ol class="ma">
+				<li>リスナーの起動と停止</li>
+				<li class="c">ユーザーの作成/変更</li>
+				<li>RMANの設定</li>
+				<li class="c">表領域の作成/変更</li>
+				<li>ジョブの実行</li>
+			</ol>
+			<p class="e">第3章 1</p>
+		</li>
+		<li><p class="q">EM Expressでできることはどれか、3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">UNDOアドバイザ</li>
+				<li>データベースの起動/停止</li>
+				<li>データベースのバックアップ/リカバリ</li>
+				<li>表の作成/変更</li>
+				<li class="c">SQLチューニングアドバイザ</li>
+				<li class="c">自動データベース診断モニター(ADDM)のレポートサマリーの表示</li>
+			</ol>
+			<p class="e">第3章 2</p>
+		</li>
+		<li><p class="q">EM Expressのポートを調べる方法はどれか。</p>
+			<ol class="sa">
+				<li class="c">SELECT DBMS_XDB_CONFIG.GETHTTPSPORT FROM DUAL;</li>
+				<li>DBMS_XDB_CONFIG.SETHTTPSPORTプロシージャ</li>
+				<li>テキスト形式の初期化パラメータファイルを調べる</li>
+				<li>tnsnames.oraを調べる</li>
+			</ol>
+			<p class="e">第3章 3</p>
+		</li>
+		<li><p class="q">EM Expressについて正しい説明を2つ選べ。</p>
+			<ol class="ma">
+				<li>ポート番号は常に5500でなければならない</li>
+				<li>DatabaseサーバーでAgentが起動している必要がある</li>
+				<li class="c">DISPATCHERS初期化パラメータが構成されている必要がある</li>
+				<li class="c">リスナーが起動されている必要がある</li>
+				<li>クライアントにtnsnames.oraファイルを構成しておく必要がある</li>
+			</ol>
+			<p class="e">第3章 4</p>
+		</li>
+		<li><p class="q">SQL*Plusについて正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>バッチモードでのみ使用できる</li>
+				<li>対話モードでのみ使用できる</li>
+				<li>Webを利用したグラフィカルモードでのみ使用できる</li>
+				<li class="c">対話モードおよびバッチモードで使用できる</li>
+			</ol>
+			<p class="e">第3章 5</p>
+		</li>
+		<li><p class="q">SQL*Plusでできることはどれか、3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">データベースの起動と停止</li>
+				<li class="c">データベースに接続し、SQLを発行すること</li>
+				<li class="c">表領域の作成</li>
+				<li>パスワードファイルの作成</li>
+				<li>リスナーの設定</li>
+			</ol>
+			<p class="e">第3章 6</p>
+		</li>
+		<li><p class="q">SQL*Plusについて正しい説明を3つ選べ。</p>
+			<ol class="ma">
+				<li>Webブラウザの画面からGUI操作で管理作業を実行できる</li>
+				<li class="c">OSコマンドの実行ができる</li>
+				<li class="c">SQL*Plus独自のコマンドの実行ができる</li>
+				<li class="c">SQLコマンドの実行ができる</li>
+			</ol>
+			<p class="e">第3章 7</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第4章 OracleNetwork環境の構成</h2>
+	<div>
+	<ol>
+		<li><p class="q">クライアント/サーバー形式でOracleを利用する場合に必要な条件として正しいのはどれか。</p>
+			<ol class="sa">
+				<li>サーバーにのみOracle Netを構成する</li>
+				<li>クライアントにのみOracle Netを構成する</li>
+				<li>プロトコルにTCP/IPを使用する場合は、サーバーにのみOracle Netを構成する</li>
+				<li class="c">サーバーとクライアントにOracle Netを構成する</li>
+				<li>プロトコルにTCP/IPを使用する場合は、クライアントにのみOracle Netを構成する</li>
+			</ol>
+			<p class="e">第4章 1</p>
+		</li>
+		<li><p class="q">アプリケーションサーバーを経由し、クライアントからはWebブラウザを使用してOracleデータベースに接続することを考えている。正しい説明を1つ選べ。</p>
+			<ol class="ma">
+				<li>データベースサーバーにのみOracle Netを構成する</li>
+				<li>アプリケーションサーバーにのみOracle Netを構成する</li>
+				<li>アプリケーションサーバーとクライアントにOracle Netを構成する</li>
+				<li>データベースサーバーとクライアントにOracle Netを構成する</li>
+				<li class="c">データベースサーバーとアプリケーションサーバーにOracle Netを構成する</li>
+			</ol>
+			<p class="e">第4章 2</p>
+		</li>
+		<li><p class="q">リモートアプリケーションからデータベースインスタンスに接続できるように構成したい。どのツールを使うか、2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">Oracle Net Congifuration Assistant (NetCA)</li>
+				<li class="c">Oracle Net Manager (NETMGR)</li>
+				<li>Database Configuration Assistant (DBCA)</li>
+				<li>Enterprise Manager Database Express (EM Express)</li>
+			</ol>
+			<p class="e">第4章 3</p>
+		</li>
+		<li><p class="q"><pre>SQL&gt; CONNECT scott/tiger@srv1/orcl</pre>
+			上記で使用されたネーミングメソッドはどれか。</p>
+			<ol class="sa">
+				<li class="c">簡易接続ネーミング</li>
+				<li>ローカルネーミング</li>
+				<li>外部ネーミング</li>
+				<li>グローバルネーミング</li>
+			</ol>
+			<p class="e">第4章 4</p>
+		</li>
+		<li><p class="q"><pre>SQL&gt; CONNECT scott/tiger@srv1/orcl</pre>
+			上記で使用されたネーミングメソッドについて正しい説明を3つ選べ。</p>
+			<ol class="ma">
+				<li>プロトコルはIPCである</li>
+				<li class="c">プロトコルはTCP/IPである</li>
+				<li class="c">ホスト名はsrv1である</li>
+				<li>ホスト名はorclである</li>
+				<li>データベース名はsrv1である</li>
+				<li class="c">データベース名はorclである</li>
+			</ol>
+			<p class="e">第4章 5</p>
+		</li>
+		<li><p class="q">簡易接続ネーミングの特徴について正しいのはどれか。</p>
+			<ol class="sa">
+				<li class="c">構成する必要がない</li>
+				<li>使用するプロトコルを指定する必要がある</li>
+				<li>構成情報をファイルに保管する</li>
+				<li>リスナーを不要とする</li>
+			</ol>
+			<p class="e">第4章 6</p>
+		</li>
+		<li><p class="q">リモートアプリケーションからの接続は、必ずtnsnames.oraを参照させるようにしたい。使用するネーミングメソッドはどれか。</p>
+			<ol class="sa">
+				<li class="c">ローカルネーミング</li>
+				<li>簡易接続ネーミング</li>
+				<li>外部ネーミング</li>
+				<li>グローバルネーミング</li>
+			</ol>
+			<p class="e">第4章 7</p>
+		</li>
+		<li><p class="q">クライアントからの接続要求を受け付け、Oracleデータベースに転送するデータベースサーバー側で起動しているプロセスを1つ選べ。</p>
+			<ol class="sa">
+				<li>サーバープロセス</li>
+				<li>ユーザープロセス</li>
+				<li>SMON</li>
+				<li>PMON</li>
+				<li class="c">リスナー</li>
+			</ol>
+			<p class="e">第4章 8</p>
+		</li>
+		<li><p class="q">クライアントコンピューターからSQL*Plusを使用してOracleデータベースに接続しようとしている。データベースサーバー情報SQL*Plusからは接続できるのに、クライアントのSQL*Plusからは接続ができません。原因として適切なものを1つ選べ。</p>
+			<ol class="sa">
+				<li>Oracleデータベースが停止している</li>
+				<li class="c">リスナープロセスが停止している</li>
+				<li>SQL*Plusをリモート接続モードで起動する必要がある</li>
+				<li>PMONプロセスが停止している</li>
+			</ol>
+			<p class="e">第4章 9</p>
+		</li>
+		<li><p class="q">リスナー制御ユーティリティでできることはどれか、3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">リスナーの起動</li>
+				<li class="c">リスナーの停止</li>
+				<li class="c">リスナーに登録されているサービスの参照</li>
+				<li>リスナーの削除</li>
+			</ol>
+			<p class="e">第4章 10</p>
+		</li>
+		<li><p class="q">デフォルトリスナーを使用している。クライアントから接続できないとの連絡があったため、lsnrctlコマンドを使用して、リスナーが稼働中か停止しているかを確認しようと思う。適切なものを2つ選べ。</p>
+			<ol class="ma">
+				<li>lsnrctl start</li>
+				<li>lsnrctl check</li>
+				<li class="c">lsnrctl status</li>
+				<li class="c">lsnrctl status listener</li>
+				<li>lsnrctl status 1521</li>
+			</ol>
+			<p class="e">第4章 11</p>
+		</li>
+		<li><p class="q">LISTENERというデフォルトのリスナーを使ってインスタンスに接続している。デフォルトリスナーを停止するとどうなるか。</p>
+			<ol class="sa">
+				<li class="c">既に接続中のセッションは影響なし</li>
+				<li>リスナーを起動するまでどの操作も実行できない</li>
+				<li>接続中のセッションが直ちに中断される</li>
+				<li>コミットしたデータをデータファイルに書込み後、中断する</li>
+			</ol>
+			<p class="e">第4章 12</p>
+		</li>
+		<li><p class="q">リスナープロセスの構成情報が記述されているファイルを1つ選べ。</p>
+			<ol class="sa">
+				<li>init.ora</li>
+				<li>sqlnet.ora</li>
+				<li>tnsnames.ora</li>
+				<li class="c">listner.ora</li>
+			</ol>
+			<p class="e">第4章 13</p>
+		</li>
+		<li><p class="q">次の図を見て答えなさい。<br />
+			<img src="img/1Z0-085/4-14.jpg"><br />
+			tnsnames.oraファイルの記述について、①と②の説明として適切な組み合わせを1つ選べ。</p>
+			<ol class="sa">
+				<li>①接続文字列 ②ネットサービス名</li>
+				<li>①接続記述子 ②ネットサービス名</li>
+				<li class="c">①ネットサービス名 ②接続記述子</li>
+				<li>①ネットサービス名 ②接続文字列</li>
+			</ol>
+			<p class="e">第4章 14</p>
+		</li>
+		<li><p class="q">次の中から正しい説明をすべて選べ。</p>
+			<ol class="ma">
+				<li class="c">ローカルネーミングは、ネットサービス名と接続記述子をマッピングしたtnsnames.oraファイルを使用する</li>
+				<li>外部ネーミングは、ネットサービス名とマッピング接続記述子を、Oracle Internet DirectoryやActive DirectoryなどのLDAP準拠のディレクトリサーバーに格納する</li>
+				<li>ディレクトリネーミングは、Oracle以外のネーミングメソッドにネットサービス名を格納する</li>
+				<li class="c">簡易接続ネーミングは、接続識別子に、接続記述子に相当する情報を直接指定する</li>
+			</ol>
+			<p class="e">第4章 15</p>
+		</li>
+		<li><p class="q">2つのリスナーが構成されている。<br />
+			LISTENER01<br />
+			LISTENER02<br />
+			LISTENER01は既に起動しているが、LISTENER02が停止しているため、次のコマンドを実行してLISTENER02を起動しようと思います。正しい説明を1つ選べ。<br />
+			<pre>lsnrctl start LISTENER02</pre></p>
+			<ol class="sa">
+				<li>LISTENER01が起動しているため、LISTENER02は起動エラーになる</li>
+				<li>LISTENER01は自動的に停止され、LISTENER02は起動される</li>
+				<li class="c">LISTENER01には影響なく、LISTENER02は起動される</li>
+				<li>LISTENER01を事前に停止してから、LISTENER02を起動するように警告メッセージが表示される</li>
+			</ol>
+			<p class="e">第4章 16</p>
+		</li>
+		<li><p class="q">クライアントからOracleデータベースに接続する方法として、ローカルネーミングメソッドを使用しようと考えている。正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>クライアントに、listener.oraファイルを作成する</li>
+				<li class="c">クライアントに、tnsnames.oraファイルを作成する</li>
+				<li>クライアントに、sqlnet.oraファイルを作成する</li>
+				<li>サーバーに、tnsnames.oraファイルを作成する</li>
+			</ol>
+			<p class="e">第4章 17</p>
+		</li>
+		<li><p class="q">リスナーを起動する方法として適切なものを2つ選べ。</p>
+			<ol class="ma">
+				<li>lsnrctl restartallコマンドを使用してリスナーを起動する</li>
+				<li class="c">Oracle Enterprise Manager Cloud Controlからリスナーを起動する</li>
+				<li class="c">lsnrctl startコマンドを使用してリスナーを起動する</li>
+				<li>lsnrctl servicesコマンドを使用してリスナーを起動する</li>
+				<li>Oracle Enterprise Manager Database Expressからリスナーを起動する</li>
+			</ol>
+			<p class="e">第4章 18</p>
+		</li>
+		<li><p class="q">Oracleデータベースのメンテナンスを急遽行うことになった。その間、クライアントから接続できないように、リスナーを呈する必要がある。リスナーを停止する方法として適切なものをすべて選べ。</p>
+			<ol class="ma">
+				<li>Net Managerを使用してリスナーを停止する</li>
+				<li class="c">Oracle Enterprise Manager Cloud Controlからリスナーを停止する</li>
+				<li class="c">lsnrctl stopコマンドを使用してリスナーを停止する</li>
+				<li>lsnrctl servicesコマンドを使用してリスナーを停止する</li>
+				<li>Oracle Enterprise Manager Database Expressからリスナーを停止する</li>
+			</ol>
+			<p class="e">第4章 19</p>
+		</li>
+		<li><p class="q">デフォルトリスナーについて、正しい説明をすべて選べ。</p>
+			<ol class="ma">
+				<li class="c">ポート番号は1521である</li>
+				<li>名前はLISTENERだが、他の名前を設定することも可能である</li>
+				<li class="c">lsnrctlコマンドでリスナー名を省略すると、デフォルトリスナーを指定したものと認識される</li>
+				<li class="c">listner.oraファイルが存在しなくても認識される</li>
+			</ol>
+			<p class="e">第4章 20</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第5章 Oracleインスタンスの管理</h2>
+	<div>
+	<ol>
+		<li><p class="q">データベースがオープンされるまでの流れとして、次の①～④を正しい順に並べたものを1つ選べ。<br />
+			①SGAが割り当てられ、バックグラウンドプロセスが起動する<br />
+			②初期化パラメータファイルを読み込む<br />
+			③制御ファイルがオープンされる<br />
+			④データファイルとREDOログファイルがオープンされる</p>
+			<ol class="sa">
+				<li>①→②→③→④</li>
+				<li class="c">②→①→③→④</li>
+				<li>②→①→④→③</li>
+				<li>①→②→④→③</li>
+			</ol>
+			<p class="e">第5章 1</p>
+		</li>
+		<li><p class="q">データベースを起動するまでの順番で正しいのはどれか。<br />
+			①バックグラウンドプロセスの起動<br />
+			②データファイルの整合性のチェック<br />
+			③制御ファイルの読込み<br />
+			④REDOログファイルの読込み<br />
+			⑤初期化パラメータファイルの読込み<br />
+			⑥リカバリセッションの開始<br />
+			⑦SGAの割り当て</p>
+			<ol class="sa">
+				<li>⑤→①→⑦→③→②→⑥→④</li>
+				<li>⑤→⑦→①→②→④→③→⑥</li>
+				<li>⑤→①→⑦→③→④→②→⑥</li>
+				<li class="c">⑤→⑦→①→③→④→②→⑥</li>
+				<li>⑤→⑦→①→②→③→④→⑥</li>
+			</ol>
+			<p class="e">第5章 2</p>
+		</li>
+		<li><p class="q">インスタンスを起動した後、どのような状態になるか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">MOUNT状態からOPENするときにデータファイルの整合性をチェックする</li>
+				<li class="c">OPEN状態で、SYSDBA権限を持たない一般のユーザーが接続できるようになる</li>
+				<li>制御ファイルを読み込んでNOMOUNTになる</li>
+				<li>MOUNT中にREDOログファイルの整合性をチェックする</li>
+				<li>REDOログファイルを読み込んでNOMOUNT状態になる</li>
+			</ol>
+			<p class="e">第5章 3</p>
+		</li>
+		<li><p class="q">NOMOUNT、MOUNT状態で接続できる権限はどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">SYSDBA</li>
+				<li class="c">SYSOPER</li>
+				<li>DBAロール</li>
+				<li>CREATE SESSIONシステム権限</li>
+			</ol>
+			<p class="e">第5章 4</p>
+		</li>
+		<li><p class="q">初期化パラメータファイルについて正しい説明をすべて選べ。</p>
+			<ol class="ma">
+				<li class="c">サーバーパラメータファイルは、Oracleデータベースによって読込みと書込みが可能である</li>
+				<li>テキスト初期化パラメータファイルは、Oracleデータベースによって読込みと書込みが可能である</li>
+				<li>サーバーパラメータファイル使用時、ALTER SYSTEM文でパラメータを変更してもサーバーパラメータファイルには反映されない</li>
+				<li class="c">テキスト初期化パラメータファイル使用時、ALTER SYSTEM文でパラメータを変更してもテキスト初期化パラメータファイルには反映されない</li>
+			</ol>
+			<p class="e">第5章 5</p>
+		</li>
+		<li><p class="q">インスタンスについて正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li class="c">1つのコンピュータ上に複数のインスタンスを構成することができる</li>
+				<li>1つのインスタンスに複数のデータベースファイルを構成することができる</li>
+				<li>1つのインスタンスに複数のSGAを構成することができる</li>
+				<li>1つのインスタンスを複数のコンピュータに分散させることができる</li>
+			</ol>
+			<p class="e">第5章 6</p>
+		</li>
+		<li><p class="q">1時間後にデータベースサーバマシンのメンテナンスを行うことになり、急遽データベースサービスを停止しなければならない。利用中のユーザーへの影響は最小限に抑えたいため、ユーザーが現在実行しているトランザクションが完了するまで待って、停止する必要がある。インスタンスの停止方法として適切なものを1つ選べ。</p>
+			<ol class="sa">
+				<li>shutdown abort</li>
+				<li>shutdown immediate</li>
+				<li class="c">shutdown transactional</li>
+				<li>shutdown normal</li>
+			</ol>
+			<p class="e">第5章 7</p>
+		</li>
+		<li><p class="q">初期化パラメータファイルについて正しい説明を2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">インスタンスが起動されるときに読み込まれる</li>
+				<li>MOUNT時に読み込まれる</li>
+				<li>インスタンス停止時に読み込まれる</li>
+				<li class="c">バイナリ形式とテキスト形式がある</li>
+			</ol>
+			<p class="e">第5章 8</p>
+		</li>
+		<li><p class="q">自動メモリー管理を使用する場合に管理者が設定する必要があるサイズはどれか。1つ選べ。</p>
+			<ol class="sa">
+				<li>SGAのサイズ</li>
+				<li>PGAのサイズ</li>
+				<li>SGAとPGAそれぞれのサイズ</li>
+				<li class="c">SGAとPGAの合計のサイズ</li>
+			</ol>
+			<p class="e">第5章 9</p>
+		</li>
+		<li><p class="q">次を見て正しいものを1つ選べ。<br />
+<pre>NAME                   TYPE         VALUE
+---------------------- ------------ ------------
+memory_max_target      big integer  1584M
+memory_target          big integer  1584M
+sga_target             big integer  0
+pga_aggregate_target   big integer  100M</pre></p>
+			<ol class="sa">
+				<li class="c">SGAとPGAが自動調整される</li>
+				<li>SGAとPGAは手動で管理する</li>
+				<li>PGAのみ自動調整される</li>
+				<li>SGAのみ自動調整される</li>
+			</ol>
+			<p class="e">第5章 10</p>
+		</li>
+		<li><p class="q">SGAのコンポーネントの名前とその役割について、正しい組み合わせはどれか。</p>
+			<ol class="sa">
+				<li>データベースバッファキャッシュ : データディクショナリがキャッシュされる</li>
+				<li class="c">共有プール : SQLの解析結果がキャッシュされる</li>
+				<li>REDOログバッファ : 変更前のデータを保存するために使用される</li>
+				<li>ラージプール : 更新のために読み込んだデータブロックがキャッシュされる</li>
+			</ol>
+			<p class="e">第5章 11</p>
+		</li>
+		<li><p class="q">トランザクションを実行し、コミットを発行した。コミットのタイミングでかならず書き込みが行われるファイルはどれか。</p>
+			<ol class="sa">
+				<li>UNDO表領域のデータファイル</li>
+				<li>SYSTEM表領域のデータファイル</li>
+				<li>制御ファイル</li>
+				<li class="c">REDOログファイル</li>
+			</ol>
+			<p class="e">第5章 12</p>
+		</li>
+		<li><p class="q">ユーザーがUPDATE文を発行した。UPDATE対象のデータを含むブロックをデータファイルから読込み。データベースバッファキャッシュに格納するプロセスは、どのプロセスか。</p>
+			<ol class="sa">
+				<li>ユーザープロセス</li>
+				<li class="c">サーバープロセス</li>
+				<li>データベースライター(DBWR)</li>
+				<li>システムモニター(SMON)</li>
+			</ol>
+			<p class="e">第5章 13</p>
+		</li>
+		<li><p class="q">SQL*Plusを使ってクライアントマシンからデータベースサーバーに接続し、処理を行ってきたが、障害のためクライアントマシンが異常終了してしまった。このとき、サーバー側で不要になったリソースの開放を行うのはどのプロセスか。</p>
+			<ol class="sa">
+				<li>ユーザープロセス</li>
+				<li>システムモニター(SMON)</li>
+				<li>チェックポイント(CKPT)</li>
+				<li class="c">プロセスモニター(PMON)</li>
+			</ol>
+			<p class="e">第5章 14</p>
+		</li>
+		<li><p class="q">SGA上のコンポーネントのうち、バックアップや並列処理などの作業領域として使用されるコンポーネントはどれか。</p>
+			<ol class="sa">
+				<li>Javaプール</li>
+				<li class="c">ラージプール</li>
+				<li>REDOログバッファ</li>
+				<li>データベースバッファキャッシュ</li>
+			</ol>
+			<p class="e">第5章 15</p>
+		</li>
+		<li><p class="q">解析済みのSQL文がキャッシュされているメモリーコンポーネントはどれか。</p>
+			<ol class="sa">
+				<li>ラージプール</li>
+				<li class="c">共有プール</li>
+				<li>データベースバッファキャッシュ</li>
+				<li>REDOログバッファ</li>
+			</ol>
+			<p class="e">第5章 16</p>
+		</li>
+		<li><p class="q">次のコマンドを実行した。<br />
+			<pre>ALTER SYSTEM SET PGA_AGGREGATE_TARGET=100M;</pre>
+			正しい説明はどれか。</p>
+			<ol class="sa">
+				<li class="c">すぐに100Mが設定される</li>
+				<li>1時間後に100Mが設定される</li>
+				<li>インスタンスの再起動時に100Mが設定される</li>
+				<li>静的パラメータのためエラーとなる</li>
+			</ol>
+			<p class="e">第5章 17</p>
+		</li>
+		<li><p class="q">次のコマンドを実行した。<br />
+			<pre>ALTER SYSTEM SET SGA_MAX_SIZE=1G;</pre>
+			正しい説明はどれか。</p>
+			<ol class="sa">
+				<li>すぐに1Gが設定される</li>
+				<li>1時間後に1Gが設定される</li>
+				<li>インスタンスの再起動時に1Gが設定される</li>
+				<li class="c">静的パラメータのためエラーとなる</li>
+			</ol>
+			<p class="e">第5章 18</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第6章 データベース記憶構造の管理</h2>
+	<div>
+	<ol>
+		<li><p class="q">REDOログファイルについて正しいものを2つ選べ。</p>
+			<ol class="ma">
+				<li>表や索引などのデータを格納する</li>
+				<li class="c">変更履歴を保存する</li>
+				<li class="c">リカバリ中にデータベースをロールフォワードするために使用される</li>
+				<li>トランザクションをロールバックするために使用される</li>
+			</ol>
+			<p class="e">第6章 1</p>
+		</li>
+		<li><p class="q">制御ファイルに格納されている情報として正しいものを3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">データファイル名</li>
+				<li>SYSユーザーのパスワード</li>
+				<li class="c">REDOログファイル名</li>
+				<li>初期化パラメータの設定値</li>
+				<li class="c">データベース作成のタイムスタンプ</li>
+			</ol>
+			<p class="e">第6章 2</p>
+		</li>
+		<li><p class="q">制御ファイルについて正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>制御ファイルの場所と名前は初期化パラメータファイルに記載してあり、NOMOUNT時に読み込まれる</li>
+				<li>制御ファイルの場所と名前はアラートログファイルに書き込まれ、MOUNT時に読み込まれる</li>
+				<li class="c">制御ファイルの場所と名前は初期化パラメータファイルに記載してあり、MOUNT時に読み込まれる</li>
+				<li>制御ファイルの場所と名前はアラートログファイルに書き込まれ、OPEN時に読み込まれる</li>
+			</ol>
+			<p class="e">第6章 3</p>
+		</li>
+		<li><p class="q">制御ファイルに関する正しい説明を2つ選べ。</p>
+			<ol class="ma">
+				<li>データベースには少なくとも2つ必要</li>
+				<li>複数のディスクに多重化する必要がある</li>
+				<li class="c">現在のデータファイル、REDOログファイルの名前と場所が記録されている</li>
+				<li class="c">制御ファイルの位置は、CONTROL＿FILESで指定されている</li>
+			</ol>
+			<p class="e">第6章 4</p>
+		</li>
+		<li><p class="q">REDOログファイルについて正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>Oracleデータベースをオープンするためには最低2つのREDOログメンバーが必要である</li>
+				<li class="c">REDOロググループを循環式に上書きする</li>
+				<li>REDOログメンバーを循環式に上書きする</li>
+				<li>グループ内のメンバー数は同じにする必要がある</li>
+			</ol>
+			<p class="e">第6章 5</p>
+		</li>
+		<li><p class="q">次の条件を満たす表領域を作成するときの設定として正しいものを3つ選べ。<br />
+			・後からデータファイルを追加したい<br />
+			・表領域がいっぱいになったらデータファイルを自動的に拡張したい<br />
+			・アプリケーション用のデータを格納したい</p>
+			<ol class="ma">
+				<li>bigfile表領域にする</li>
+				<li class="c">smallfile表領域にする</li>
+				<li class="c">AUTOEXTEND ONにする</li>
+				<li>AUTOEXTEND OFFにする</li>
+				<li class="c">永続表領域にする</li>
+				<li>UNDO表領域にする</li>
+			</ol>
+			<p class="e">第6章 6</p>
+		</li>
+		<li><p class="q">smallfile表領域のストレージ容量を増やす方法として適しているのをすべて選べ。</p>
+			<ol class="ma">
+				<li class="c">表領域にデータファイルを追加する</li>
+				<li class="c">データファイルのサイズを変更する</li>
+				<li class="c">データファイルをAUTOEXTEND ONに設定する</li>
+				<li>UNDO_RETENTION初期化パラメータの設定値を大きくする</li>
+			</ol>
+			<p class="e">第6章 7</p>
+		</li>
+		<li><p class="q">記憶域についての説明で正しいものはどれか。</p>
+			<ol class="sa">
+				<li class="c">1つのセグメントは複数のデータファイルにまたがることができる</li>
+				<li>エクステントは複数のデータファイルにまたがることができる</li>
+				<li>データファイルは複数の表領域で共有できる</li>
+				<li>表領域は複数のデータベースで共有できる</li>
+			</ol>
+			<p class="e">第6章 8</p>
+		</li>
+		<li><p class="q">表が格納された表領域の削除について正しいものを1つ選べ。</p>
+			<ol class="sa">
+				<li class="c">表領域に格納されている表と、その表のディクショナリ情報がデータディクショナリから削除される</li>
+				<li>表領域に格納されている表と、その表に定義されている索引のうち同じ表領域に格納されているものが削除され、異なる表領域に格納されている索引は削除されない</li>
+				<li>表領域に格納されている表にデータが1件でも存在している場合は、表領域削除時にエラーになる</li>
+				<li>表領域に格納されているデータは削除されるが、その表の定義はデータディクショナリに残る</li>
+			</ol>
+			<p class="e">第6章 9</p>
+		</li>
+		<li><p class="q">UNDOデータについて正しいものはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">読み取り一貫性で使用される</li>
+				<li class="c">明示的なロールバック要求に備えてロールバックするために使用される</li>
+				<li>データベースへの更新情報を記録するために使用される</li>
+				<li>リカバリ中にコミットされた変更をロールフォワードするために使用される</li>
+			</ol>
+			<p class="e">第6章 10</p>
+		</li>
+		<li><p class="q">UNDOデータについて正しいものはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">フラッシュバック機能で使用される</li>
+				<li>フラッシュバックデータベース機能に必要</li>
+				<li class="c">変更前のデータを格納</li>
+				<li>変更後のデータを格納</li>
+			</ol>
+			<p class="e">第6章 11</p>
+		</li>
+		<li><p class="q">UNDOデータとREDOデータについての説明として正しいものを2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">UNDOデータは変更を元に戻すため、REDOデータは変更を再構築するために使用される</li>
+				<li>REDOデータは変更を元に戻すため、UNDOデータは変更を再構築するために使用される</li>
+				<li class="c">UNDOデータにより一貫性のないデータの読取りから保護され、REDOデータによりデータの損失から保護される</li>
+				<li>REDOデータにより一貫性のないデータの読取りから保護され、UNDOデータによりデータの損失から保護される</li>
+			</ol>
+			<p class="e">第6章 12</p>
+		</li>
+		<li><p class="q">UNDO表領域に関する説明として次の中から正しいものを2つ選べ。</p>
+			<ol class="ma">
+				<li>1つのデータベースで複数のUNDO表領域を一度に使用できる</li>
+				<li class="c">1つのデータベースには、複数のUNDO表領域を作成できる</li>
+				<li class="c">1つのデータベースにおいて、1つのUNDO表領域だけをアクティブにすることができる</li>
+				<li>1つのデータベースにおいて、複数のUNDO表領域をアクティブにすることができる</li>
+			</ol>
+			<p class="e">第6章 13</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第7章 ユーザーおよびセキュリティの管理</h2>
+	<div>
+	<ol>
+		<li><p class="q">次のSQL文を実行したところ、エラーになった。
+<pre>SQL&gt; DROP USER scott;
+DROP USER scott
+*
+ERROR at line 1:
+ORA-01922: CASCADE must be specified to drop 'SCOTT'</pre>
+			エラーになる原因はどれか。</p>
+			<ol class="sa">
+				<li>パスワードの期限が切れている</li>
+				<li>ユーザーが現在接続中である</li>
+				<li class="c">オブジェクトを所有している</li>
+				<li>アカウントロック中である</li>
+			</ol>
+			<p class="e">第7章 1</p>
+		</li>
+		<li><p class="q">CREATE USERコマンドを用いたユーザー作成時に設定できるものはどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">クォータ</li>
+				<li class="c">認証方式</li>
+				<li class="c">デフォルト表領域</li>
+				<li>ログイン権限</li>
+				<li>ロール</li>
+			</ol>
+			<p class="e">第7章 2</p>
+		</li>
+		<li><p class="q"><pre>ALTER USER scott ACCOUNT LOCK;</pre>
+			上記のSQLを実行した結果について正しいものはどれか。</p>
+			<ol class="sa">
+				<li>パスワードが期限切れになり、次回ログイン時にパスワードの変更が求められる</li>
+				<li>このユーザーは、アクセス権のある他のユーザーのオブジェクトにアクセスできる</li>
+				<li class="c">このユーザーのオブジェクトにアクセス権限を持つ他のユーザーは、アクセスできる</li>
+				<li>このユーザーはオブジェクトを一切作成できない</li>
+			</ol>
+			<p class="e">第7章 3</p>
+		</li>
+		<li><p class="q"><pre>CREATE USER scott
+IDENTIFIED BY tiger
+DEFAULT TABLESPACE sales_tbs
+TEMPORARY TABLESPACE temp
+QUOTA 5M ON ship_tbs
+PASSWORD EXPIRE;</pre>
+			上記のSQLを実行した結果について、正しいものはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li>sales_tbsに記憶域の割り当てが可能</li>
+				<li class="c">ship_tbsに記憶域の割り当てが可能</li>
+				<li>tempにクオータ設定がないためディスクソートが正常に実行できない</li>
+				<li>プロファイルの名前を指定していないため、文は正常に実行できない</li>
+				<li class="c">ユーザーは初回ログイン時にパスワード変更が求められる</li>
+			</ol>
+			<p class="e">第7章 4</p>
+		</li>
+		<li><p class="q">ユーザーを作成するときの説明として正しいものを選べ。</p>
+			<ol class="sa">
+				<li>デフォルト表領域を指定しないとエラーになる</li>
+				<li>一時表領域を指定しないとエラーになる</li>
+				<li>UNDO表領域を指定しないとエラーになる</li>
+				<li class="c">デフォルト表領域と一時表領域は、指定しないとデフォルトが指定される</li>
+			</ol>
+			<p class="e">第7章 5</p>
+		</li>
+		<li><p class="q">パスワードポリシーを定義するのはどれか。</p>
+			<ol class="sa">
+				<li>システム権限</li>
+				<li>オブジェクト権限</li>
+				<li>ロール</li>
+				<li class="c">プロファイル</li>
+			</ol>
+			<p class="e">第7章 6</p>
+		</li>
+		<li><p class="q">退職者が出たため、その人が使用していたOracleデータベースのアカウント(ユーザー)を削除することになった。次の中から正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li class="c">アカウントを削除するとそのユーザーが所有する表も削除される</li>
+				<li>アカウントを削除するとそのユーザが所有する表の所有者はSYSTEMに変更される</li>
+				<li>アカウントを削除するとそのユーザが作成したデータは削除されるが、そのユーザーが所有する表の定義は削除されない</li>
+				<li>アカウントを削除するとそのユーザが所有する索引とビューは削除されるが、表は削除されない</li>
+			</ol>
+			<p class="e">第7章 7</p>
+		</li>
+		<li><p class="q">オブジェクト権限について正しい記述を2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">オブジェクトの所有者とデータベース管理者が付与することができる</li>
+				<li>データベース管理者はオブジェクトの所有者から、所有するオブジェクトに対する権限を取り消すことができる</li>
+				<li>オブジェクトの所有者のみが付与できる</li>
+				<li class="c">オブジェクトの所有者にはオブジェクトに対するすべての権限が自動的に付与される</li>
+			</ol>
+			<p class="e">第7章 8</p>
+		</li>
+		<li><p class="q">システム権限はどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">データベースへのログイン</li>
+				<li class="c">ロールの作成</li>
+				<li>自分のスキーマ内にある表のSELECT</li>
+				<li>自分のパスワードの変更</li>
+			</ol>
+			<p class="e">第7章 9</p>
+		</li>
+		<li><p class="q">次の中から正しい説明を2つ選べ。</p>
+			<ol class="ma">
+				<li>SYSDBA権限は、データベース管理者用の権限であり、DBAロールと同意である</li>
+				<li>SYSDBA権限はSYS以外のユーザーに付与することはできない</li>
+				<li class="c">SYSDBA権限には、インスタンスの起動/停止操作が含まれる</li>
+				<li class="c">SYSユーザーには、デフォルトでSYSDBA権限が付与されている</li>
+			</ol>
+			<p class="e">第7章 10</p>
+		</li>
+		<li><p class="q">SHユーザーが所有しているsales_history表に対するSELECTオブジェクト権限をsalesロールに付与し、このロールをSCOTTに付与した。SCOTTユーザーには、SHからsales_history表に対するSELECTオブジェクト権限が付与されていた。そこで、SHから付与されていたsales_history表に対するSELECTオブジェクト権限は取り消した。次の中から正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>SHから付与されていたsales_history表に対するSELECTオブジェクト権限が取り消されたので、SCOTTはsales_history表への検索はできなくなる</li>
+				<li class="c">salesロールには、SHが所有するsales_history表に対するSELECTオブジェクト権限が含まれているので、SCOTTはsales_history表への検索ができる</li>
+				<li>SCOTTに付与されていたsales_history表に対するSELECTオブジェクト権限が取り消されると、salesロールに付与されたsales_history表に対するSELECTオブジェクト権限は、SCOTTにおいて無効になってしまうので、SCOTTはsales_history表への検索はできなくなる</li>
+				<li>salesロールには、sales_history表に対するSELECTオブジェクト権限が含まれているので、SCOTTからsales_history表に対するSELECTオブジェクト権限を取り消すことはできない</li>
+			</ol>
+			<p class="e">第7章 11</p>
+		</li>
+		<li><p class="q">複数のユーザーに複数の権限を付与するにあたり、権限の管理を簡素化するために使用されるものを1つ選べ。</p>
+			<ol class="sa">
+				<li>プロファイル</li>
+				<li class="c">ロール</li>
+				<li>自動権限管理</li>
+				<li>ビュー</li>
+			</ol>
+			<p class="e">第7章 12</p>
+		</li>
+		<li><p class="q">SYSOPER権限では実行できず、SYSDBA権限でのみ実行できる操作はどれか。</p>
+			<ol class="sa">
+				<li>インスタンスの起動</li>
+				<li>インスタンスの停止</li>
+				<li>完全リカバリ</li>
+				<li class="c">データベースの作成</li>
+			</ol>
+			<p class="e">第7章 13</p>
+		</li>
+		<li><p class="q">ロールについて正しい説明はどれか。</p>
+			<ol class="sa">
+				<li>ロールに別のロールを付与することはできない</li>
+				<li>ロールにはオブジェクト権限を含めることはできない</li>
+				<li class="c">ロールをプロファイルに与えることはできない</li>
+				<li>ロールを作成できるのはSYSDBAだけである</li>
+			</ol>
+			<p class="e">第7章 14</p>
+		</li>
+		<li><p class="q">ユーザーを削除するとどうなるか。正しい説明はどれか。</p>
+			<ol class="sa">
+				<li>そのユーザーはロックされログインできなくなるが、オブジェクトは削除されずに維持される</li>
+				<li>そのユーザーが所有しているオブジェクトとそのユーザが持っている権限やロール全てが削除されるが、ユーザー名と認証方式だけは削除されずに維持される</li>
+				<li class="c">ユーザーの定義が削除され、併せてそのユーザーが所有しているオブジェクトも削除される</li>
+				<li>定義済みのユーザーはどのような状況でも削除できない</li>
+			</ol>
+			<p class="e">第7章 15</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第8章 スキーマオブジェクトの管理</h2>
+	<div>
+	<ol>
+		<li><p class="q"><pre>DROP TABLE sales;</pre>
+			このコマンドを実行したときに削除されるものをすべて選べ。</p>
+			<ol class="ma">
+				<li class="c">表構造</li>
+				<li class="c">表に格納されたデータ</li>
+				<li class="c">sales表に作成された索引</li>
+				<li class="c">sales表に作成された制約</li>
+				<li>sales表を参照するビュー</li>
+			</ol>
+			<p class="e">第8章 1</p>
+		</li>
+		<li><p class="q">employee表を作成することになった。phone列には、会社が社員に支給している携帯電話の番号を格納する。各社員の携帯電話番号には重複がないものとする。phone列に定義する最適な制約を1つ選べ。</p>
+			<ol class="sa">
+				<li>PRIMARY KEY</li>
+				<li>FOREIGN KEY</li>
+				<li>CHECK</li>
+				<li class="c">UNIQUE</li>
+				<li>NOT NULL</li>
+			</ol>
+			<p class="e">第8章 2</p>
+		</li>
+		<li><p class="q">customer(顧客)表とorder(注文)表を作成する。事前に登録された顧客からのみ注文を受け付ける。order表には、どの顧客からの注文なのか分かるようにcust_id列を持たせ、存在しない顧客が誤って指定されないようにする。次の中から正しい制約の定義を2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">customer表のcust_id列には、PRIMARY KEY制約を定義する</li>
+				<li>customer表のcust_id列には、FOREIGN KEY制約を定義する</li>
+				<li>order表のcust_id列には、PRIMARY KEY制約を定義する</li>
+				<li class="c">order表のcust_id列には、FOREIGN KEY制約を定義する</li>
+			</ol>
+			<p class="e">第8章 3</p>
+		</li>
+		<li><p class="q">次の中から正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>表のデータをすべて削除するとその表の定義も削除される</li>
+				<li class="c">表を削除するとその表の定義と全てのデータが削除される</li>
+				<li>表を切り捨てるとその表の定義と全てのデータが削除される</li>
+				<li>表を削除するとその表をもとに作成されていたビューも削除される</li>
+			</ol>
+			<p class="e">第8章 4</p>
+		</li>
+		<li><p class="q">制約について正しい説明はどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li>CHECK制約は、列を参照する条件を指定できない</li>
+				<li class="c">外部キー制約は、表の一意の値を参照する</li>
+				<li>一意制約はNULLを挿入することはできない</li>
+				<li class="c">主キー制約は同じ表に複数指定することはできない</li>
+			</ol>
+			<p class="e">第8章 5</p>
+		</li>
+		<li><p class="q">索引について正しい説明はどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">表の複数の列に作成できる</li>
+				<li class="c">表を更新すると自動的にメンテナンスされる</li>
+				<li>表を削除すると索引は無効になる</li>
+				<li>一意の列にのみ作成できる</li>
+			</ol>
+			<p class="e">第8章 6</p>
+		</li>
+		<li><p class="q">ユーザーから、注文分析をするときの検索処理が遅いとクレームが来ている。この注文データは各支店のデータが夜中のうちに転送されて一括挿入されるため、データの挿入または更新に関しては時間がかかっても構わないとユーザーは言っている。最適な方法を1つ選べ。</p>
+			<ol class="sa">
+				<li>ビューを作成する</li>
+				<li class="c">索引を作成する</li>
+				<li>索引を削除する</li>
+				<li>制約を定義する</li>
+			</ol>
+			<p class="e">第8章 7</p>
+		</li>
+		<li><p class="q">ビューの目的として正しいものを2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">アクセス制限</li>
+				<li>検索速度の向上</li>
+				<li class="c">アクセスの簡素化</li>
+				<li>権限管理の簡素化</li>
+			</ol>
+			<p class="e">第8章 8</p>
+		</li>
+		<li><p class="q">索引の説明として正しいものを3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">表の列または列の組み合わせに対して定義される</li>
+				<li class="c">索引を定義された列の値とその値を格納している行の位置情報を持つ</li>
+				<li class="c">ツリー構造を持つ</li>
+				<li>表に対するアクセス制限を制御するために用いる</li>
+			</ol>
+			<p class="e">第8章 9</p>
+		</li>
+		<li><p class="q">SQL*Loaderに関する正しい説明はどれか。</p>
+			<ol class="sa">
+				<li>データベースのデータを外部ファイルに出力することができる</li>
+				<li class="c">非Oracleファイルのデータをデータベース表にロードする</li>
+				<li>Dumpファイルを出力する</li>
+				<li>データベースからデータをエクスポートし、エクスポートしたデータをインポートすることができる</li>
+			</ol>
+			<p class="e">第8章 10</p>
+		</li>
+		<li><p class="q">データベースのRECYCLEBINがONになっている。scottユーザーのdept表を削除した。正しい説明を2つ選べ。</p>
+			<ol class="ma">
+				<li>表構造のみを戻せる</li>
+				<li class="c">表構造とデータを戻せる</li>
+				<li>ビューと索引も削除される</li>
+				<li class="c">索引は削除されるがビューは残る</li>
+			</ol>
+			<p class="e">第8章 11</p>
+		</li>
+		<li><p class="q">一般的に、索引はどのような列に対して作成するとよいか。</p>
+			<ol class="sa">
+				<li class="c">WHERE句の条件として頻繁に使用される列で、かつ、WHERE句の条件により問い合わせ結果をわずかな行数にまで絞り込める列</li>
+				<li>頻繁に更新されるが、WHERE句の条件としてはほとんど使用されない列</li>
+				<li>WHERE句の条件として使用されるが、列の値の種類が少なく、WHERE句の条件により問い合わせ結果の行数をあまり絞り込めない列</li>
+				<li>頻繁に問合せされるが、WHERE句の条件としてはほとんど使用されない列</li>
+			</ol>
+			<p class="e">第8章 12</p>
+		</li>
+		<li><p class="q">dept表のname列にdept_idxという索引を作成した。なお、name列にはNOT NULL制約が定義されている。dept_idx索引のメンテナンスが行われるのはどのケースが。3つ選べ。</p>
+			<ol class="ma">
+				<li>dept表をSELECTしたとき</li>
+				<li class="c">dept表にデータをINSERTしたとき</li>
+				<li class="c">dept表からデータをDELETEしたとき</li>
+				<li class="c">dept表のname列の値をUPDATEしたとき</li>
+				<li>dept表のlocation列の値をUPDATEしたとき</li>
+			</ol>
+			<p class="e">第8章 13</p>
+		</li>
+		<li><p class="q">リレーショナルデータベースの必須のコンポーネントはどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">オブジェクトとリレーションシップ</li>
+				<li class="c">データを操作するSQLと一連の演算子</li>
+				<li class="c">一貫性のためのデータ整合性</li>
+				<li>データ操作を行うプロシージャ</li>
+				<li>データ操作を行うトリガー</li>
+			</ol>
+			<p class="e">第8章 14</p>
+		</li>
+		<li><p class="q">リレーショナルデータベースの用語の説明として正しいものを1つ選べ。</p>
+			<ol class="sa">
+				<li>リレーショナルデータベースにおいて、表には必ず主キーと外部キーを宣言しなればならない</li>
+				<li>表において外部キーは1つしか宣言できない</li>
+				<li class="c">表において主キーは1つしか宣言できない</li>
+				<li>複数の列を組み合わせて外部キーを宣言することはできない</li>
+				<li>複数の列を組み合わせて主キーを宣言することはできない</li>
+			</ol>
+			<p class="e">第8章 15</p>
+		</li>
+		<li><p class="q">商品マスタを管理している管理部では、営業部には商品の販売価格を検索させてもよいが、仕入れ価格は検索させたくないと考えている。適切な対応を1つ選べ。</p>
+			<ol class="sa">
+				<li class="c">商品マスタ表に対して、仕入れ価格を含まないビューを作成し、営業部にはそのビューに対するSELELCTのオブジェクト権限を付与する</li>
+				<li>商品マスタ表に対して、仕入れ価格以外の列に対するSELECTのオブジェクト権限を付与する</li>
+				<li>商品マスタ表に対して、仕入れ価格を含まないビューを作成し、営業部にはそのビューと商品マスタ表の両方に対するSELECTのオブジェクト権限を付与する</li>
+				<li>商品マスタ表に対して、仕入れ価格を含まないビューを作成し、営業部には商品マスタ表に対するSELECTのオブジェクト権限を付与する</li>
+			</ol>
+			<p class="e">第8章 16</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第9章 データベースの監視およびアドバイザの使用</h2>
+	<div>
+	<ol>
+		<li><p class="q">次の文章の(1)と(2)に当てはまる組み合わせとして正しいものを選べ。<br />
+			<br />
+			Oracleデータベースでは、データベースの状態及びワークロードに関するスナップショットが定期的に収集される。スナップショットでは、任意の時点でのシステムの状態に関する統計サマリーが提供される。これらのスナップショットは、(1)表領域にある(2)に格納される。</p>
+			<ol class="sa">
+				<li>(1)SYSAUX (2)データディクショナリ</li>
+				<li>(1)SYSTEM (2)データディクショナリ</li>
+				<li>(1)TEMPORARY (2)一時セグメント</li>
+				<li class="c">(1)SYSAUX (2)AWR</li>
+			</ol>
+			<p class="e">第9章 1</p>
+		</li>
+		<li><p class="q">AWRのスナップショットを取得しているプロセスはどれか。</p>
+			<ol class="sa">
+				<li>ARCn</li>
+				<li>SMON</li>
+				<li class="c">MMON</li>
+				<li>PMON</li>
+			</ol>
+			<p class="e">第9章 2</p>
+		</li>
+		<li><p class="q">AWRについて正しいものはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">スナップショットの収集はデフォルトで60分間隔</li>
+				<li class="c">SYSAUX表領域に格納</li>
+				<li>スナップショットの収集はデフォルトで30分間隔</li>
+				<li>SYSTEM表領域に格納</li>
+			</ol>
+			<p class="e">第9章 3</p>
+		</li>
+		<li><p class="q">次の説明に該当するものを1つ選べ。<br />
+			<br />
+			Oracleが提供する自己診断エンジンのことで、Oracleデータベースによってデータベース自身のパフォーマンスが診断され、特定された問題の解決方法が判断される。AWRで取得されたアクティブセッション履歴および統計のスナップショットを利用して、ボトルネックを特定する。手動で実行することもできる。</p>
+			<ol class="sa">
+				<li class="c">ADDM</li>
+				<li>ASM</li>
+				<li>AMM</li>
+				<li>ASMM</li>
+			</ol>
+			<p class="e">第9章 4</p>
+		</li>
+		<li><p class="q">ADDMについての説明として正しいものをすべて選べ。</p>
+			<ol class="ma">
+				<li class="c">データベースがオープンしている必要がある</li>
+				<li class="c">スナップショットを分析する</li>
+				<li class="c">推奨事項を示し、その効果を数値化して提示する</li>
+				<li>他のアドバイザから起動される</li>
+			</ol>
+			<p class="e">第9章 5</p>
+		</li>
+		<li><p class="q">自動SQLチューニングタスクが診断するものについて、正しいものはどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">欠落、失効した統計の収集</li>
+				<li class="c">新しい索引の作成</li>
+				<li class="c">SQLの修正</li>
+				<li>マテリアライズドビューの作成</li>
+				<li>パーティション表の作成</li>
+			</ol>
+			<p class="e">第9章 6</p>
+		</li>
+		<li><p class="q">SQLチューニングアドバイザについて正しい説明をすべて選べ。</p>
+			<ol class="ma">
+				<li class="c">「SQLのINをEXISTSに変更したほうがパフォーマンスが改善される」などのアドバイスが可能</li>
+				<li>索引の変更を推奨する</li>
+				<li>マテリアライズドビューの作成を推奨する</li>
+				<li class="c">オプティマイザ統計のリフレッシュを推奨する</li>
+			</ol>
+			<p class="e">第9章 7</p>
+		</li>
+		<li><p class="q">SQLアクセスアドバイザについて正しい説明をすべて選べ。</p>
+			<ol class="ma">
+				<li class="c">索引の作成、変更および削除を推奨する</li>
+				<li>ビューの作成、変更および削除を推奨する</li>
+				<li class="c">マテリアライズドビューの作成、変更および削除を推奨する</li>
+				<li>SQLプロファイルの作成及び変更を推奨する</li>
+			</ol>
+			<p class="e">第9章 8</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>第10章 バックアップ・リカバリの概要と可用性を高める構成</h2>
+	<div>
+	<ol>
+		<li><p class="q">NOARCHIVELOGモードについて正しい説明を2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">最後にバックアップした時点までしか復旧できない</li>
+				<li>最後にコミットした時点まで復旧できる</li>
+				<li class="c">ログスイッチが発生するたびにREDOログファイルが上書きされる</li>
+				<li>いっぱいになったREDOログファイルは、再度使用可能になる前にアーカイブされる</li>
+			</ol>
+			<p class="e">第10章 1</p>
+		</li>
+		<li><p class="q">NOARCHIVELOGモードで運用している。正しいものはどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">OPENしていないときのみ全体バックアップが取得できる</li>
+				<li class="c">インスタンス障害から完全に復旧できる</li>
+				<li class="c">最後のバックアップまで復旧できる</li>
+				<li>CLOSEしているときなら部分バックアップが取得できる</li>
+			</ol>
+			<p class="e">第10章 2</p>
+		</li>
+		<li><p class="q">ARCHIVELOGモードで運用している。SHUTDOWN ABORTの後のインスタンスリカバリについて正しいものはどれか。</p>
+			<ol class="sa">
+				<li class="c">OPEN時に、自動インスタンスリカバリが実行される</li>
+				<li>OPENできない。OPENするにはメディアリカバリが必要</li>
+				<li>OPEN時にアーカイブログファイルとREDOログファイルが使われ自動リカバリが実行される</li>
+				<li>OPENできる。リカバリは不要</li>
+			</ol>
+			<p class="e">第10章 3</p>
+		</li>
+		<li><p class="q">ARCHIVELOGモードの特徴はどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">データベースをオープンした状態でバックアップが可能</li>
+				<li class="c">メディアリカバリが可能</li>
+				<li class="c">インスタンスリカバリが可能</li>
+				<li>ARCHIVELOGモードに設定する前にオンラインREDOログの多重化が必要</li>
+			</ol>
+			<p class="e">第10章 4</p>
+		</li>
+		<li><p class="q">バックアップしてある物理ファイルを破損または損失したファイルの代わりに元の場所または別のファイルにコピーすることを何というか。正しいものを選べ。</p>
+			<ol class="sa">
+				<li>アーカイブ</li>
+				<li class="c">リストア</li>
+				<li>リカバリ</li>
+				<li>ロード</li>
+			</ol>
+			<p class="e">第10章 5</p>
+		</li>
+		<li><p class="q">Oracleを使用して構築した販売管理システムを利用している最中にクライアントマシンの電源障害が発生し、クライアントのセッションが停止した。この時の動きについて正しい説明を選べ。</p>
+			<ol class="sa">
+				<li>SMONがインスタンス回復をする</li>
+				<li class="c">PMONがそのセッションによって進行中だったトランザクションをロールバックする</li>
+				<li>CKPTがロールフォワードして、データファイルに書き込まれていないトランザクションデータを回復する</li>
+				<li>セッションが確保していたロックをMMONが解除する</li>
+			</ol>
+			<p class="e">第10章 6</p>
+		</li>
+		<li><p class="q">一貫性バックアップについて正しい説明をすべて選べ。</p>
+			<ol class="ma">
+				<li class="c">REDOログ内のすべての変更が、データファイルに適用されている必要がある</li>
+				<li class="c">リストア操作が終了したら、すぐにデータベースをオープンできる</li>
+				<li>ファイルのリストア後に、リカバリを実行する必要がある</li>
+				<li>ARCHIVELOGモードでは取得できない</li>
+			</ol>
+			<p class="e">第10章 7</p>
+		</li>
+		<li><p class="q">非一貫性バックアップについて正しい説明をすべて選べ。</p>
+			<ol class="ma">
+				<li class="c">データベースがオープンしていても取得できる</li>
+				<li>リストア操作が終了したら、すぐにデータベースをオープンできる</li>
+				<li class="c">ファイルのリストア後に、リカバリを実行する必要がある</li>
+				<li class="c">データファイルに適用されていない変更が含まれるREDOログファイルとアーカイブログファイルを使用してリカバリできる</li>
+			</ol>
+			<p class="e">第10章 8</p>
+		</li>
+		<li><p class="q">インスタンス障害について正しい説明を選べ。</p>
+			<ol class="sa">
+				<li class="c">インスタンスを再起動することで回復する</li>
+				<li>バックアップデータファイルをリストアし、アーカイブログファイルおよびREDOログファイルからREDOデータを適用してリカバリする</li>
+				<li>PMONにより、影響を受けたトランザクションはロールバックで復旧されるため、何もしなくて良い</li>
+				<li>オフラインバックアップをリストアし、インスタンスを再起動することで回復する</li>
+			</ol>
+			<p class="e">第10章 9</p>
+		</li>
+		<li><p class="q">インスタンス障害発生後、インスタンス再起動時にインスタンスを回復するバックグラウンドプロセスを選べ。</p>
+			<ol class="sa">
+				<li>ARCn</li>
+				<li>PMON</li>
+				<li class="c">SMON</li>
+				<li>LGWR</li>
+			</ol>
+			<p class="e">第10章 10</p>
+		</li>
+		<li><p class="q">非一貫性バックアップについて正しい説明を選べ。</p>
+			<ol class="sa">
+				<li>非一貫性バックアップとは、障害回復時には役に立たないバックアップファイルをいう</li>
+				<li>非一貫性バックアップとは、制御ファイル、データファイルおよびオンラインREDOログファイルを対象にしたバクアップのことであり、オンラインバックアップともいう</li>
+				<li class="c">非一貫性バックアップとは、データベースをオープンし、インスタンスを起動した状態で取得したバクアップのことであり、オンラインバックアップともいう</li>
+				<li>非一貫性バックアップとは、障害発生時ではなくバックアップ時点までしか戻すことのできないバックアップのことであり、オフラインバックアップともいう</li>
+			</ol>
+			<p class="e">第10章 11</p>
+		</li>
+		<li><p class="q">Real Application Clustersの説明として正しいものはどれか。</p>
+			<ol class="sa">
+				<li>1つのインスタンスで複数のデータベースを管理する構成である</li>
+				<li>複数のインスタンスから、複数のデータベースを管理する構成である</li>
+				<li class="c">複数のインスタンスから、共有ストレージ上の1つのデータベースを管理する構成である</li>
+				<li>Real Application Clustersでは、データベースファイルをASM上に格納することはできない</li>
+			</ol>
+			<p class="e">第10章 12</p>
+		</li>
+		<li><p class="q">災害時の業務継続を目的として、Data Guardを使用して、フィジカルスタンバイデータベースを構築し、運用している。プライマリデータベースとフィジカルデータベース間では、通常、どのような仕組みでデータの同期が行われているか。</p>
+			<ol class="sa">
+				<li>UNDOデータを転送し、それを適用する</li>
+				<li class="c">REDOデータを転送し、それを適用する</li>
+				<li>フラッシュバックログを転送し、それを適用する</li>
+				<li>Data PumpでエクスポートしたDumpファイルを転送し、それを適用する</li>
+			</ol>
+			<p class="e">第10章 13</p>
+		</li>
+		<li><p class="q">Automatic Storage Management(ASM)の説明として正しいものを選べ。</p>
+			<ol class="sa">
+				<li class="c">ASMの機能によりミラーリングやストライピングが自動的に行われる</li>
+				<li>Real Application Clustersの環境ではASMは使用できない</li>
+				<li>データファイル以外のファイルは格納できない</li>
+				<li>ASMの機能によりストライピングは自動的に行われるが、ミラーリングは行われない</li>
+			</ol>
+			<p class="e">第10章 14</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	<li><h2>模擬試験</h2>
+	<div>
+	<ol>
+		<li><p class="q">SQLコマンドと説明の正しい組み合わせはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">ALTER : データ定義言語</li>
+				<li>TRUCATE : データ制御言語</li>
+				<li class="c">ROLLBACK : トランザクション制御言語</li>
+				<li>UPDATE : トランザクション制御言語</li>
+				<li>DROP : データ操作言語</li>
+				<li>CREATE : データ操作言語</li>
+			</ol>
+			<p class="e">模擬試験 1</p>
+		</li>
+		<li><p class="q">リレーショナルデータベースモデルの必須のコンポーネントはどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">オブジェクトとリレーションシップ</li>
+				<li class="c">表を管理するための一連の演算子やコマンド</li>
+				<li>高パフォーマンス維持のためのプロシージャ</li>
+				<li>可用性のためのトリガー</li>
+				<li class="c">データの整合性規則</li>
+				<li>GUIの管理ツール</li>
+			</ol>
+			<p class="e">模擬試験 2</p>
+		</li>
+		<li><p class="q">トランザクションとは何か。トランザクションの説明として正しいものを2つ選べ。</p>
+			<ol class="ma">
+				<li>名前を付けてデータベースに保存した処理のこと</li>
+				<li class="c">1つ以上のSQLを含むアトミックな論理作業単位のこと</li>
+				<li class="c">トランザクション単位でコミットやロールバックができる</li>
+				<li>トランザクションはセッションをまたがることができる</li>
+			</ol>
+			<p class="e">模擬試験 3</p>
+		</li>
+		<li><p class="q">OracleでSQLを使ってデータにアクセスする。正しい説明はどれか。</p>
+			<ol class="sa">
+				<li>データにアクセスするには、ユーザーがそのデータの物理的な位置情報を指定する必要がある</li>
+				<li>データにアクセスするためのアクセスパスは、SQL文の中で、常にユーザーが指定する必要がある</li>
+				<li>データを更新するときは、同時更新が起きないように、使用者側で配慮する必要がある</li>
+				<li class="c">データベースの物理的なファイル名を知らなくても、SQLを使ってデータにアクセスできる</li>
+			</ol>
+			<p class="e">模擬試験 4</p>
+		</li>
+		<li><p class="q">次のコマンドを発行した。<br />
+			<pre>UPDATE employees SET salary = salary * 1.1 WHERE salary IS NOT NULL;</pre>
+			データベースバッファキャッシュ上でデータを更新するのはどのプロセスか。</p>
+			<ol class="sa">
+				<li>ユーザープロセス</li>
+				<li>システムモニタ(SMON)</li>
+				<li>データベースライター(DBWR)</li>
+				<li>リスナー</li>
+				<li class="c">サーバープロセス</li>
+			</ol>
+			<p class="e">模擬試験 5</p>
+		</li>
+		<li><p class="q">DELETE分を実行し、COMMIT文を発行した。COMMIT文を発行した時に何が行われるか。</p>
+			<ol class="sa">
+				<li>データベースライター(DBWR)がデータファイルに書き込む</li>
+				<li>チェックポイント(CKPT)がデータファイルに書き込む</li>
+				<li class="c">ログライター(LGWR)がREDOログファイルに書き込む</li>
+				<li>チェックポイント(CKPT)がREDOログファイルに書き込む</li>
+			</ol>
+			<p class="e">模擬試験 6</p>
+		</li>
+		<li><p class="q">REDOログバッファの機能に関して正しい記述はどれか。</p>
+			<ol class="sa">
+				<li>コミット済みの更新の履歴のみが書き込まれる</li>
+				<li>最近、実行されたSQLをキャッシュしている</li>
+				<li>最近、アクセスされたデータブロックをキャッシュしている</li>
+				<li class="c">未コミットの更新の履歴が書き込まれる</li>
+			</ol>
+			<p class="e">模擬試験 7</p>
+		</li>
+		<li><p class="q">プロセスモニター(PMON)が行う処理は何か。</p>
+			<ol class="sa">
+				<li>インスタンスリカバリを行う</li>
+				<li>インスタンスの状態をリスナーに登録する</li>
+				<li class="c">ユーザープロセス障害時に、リソースを開放する</li>
+				<li>AWRスナップショットを取得する</li>
+			</ol>
+			<p class="e">模擬試験 8</p>
+		</li>
+		<li><p class="q">制御ファイルについて正しい記述はどれか。</p>
+			<ol class="sa">
+				<li>制御ファイルには、初期化パラメータの設定値が格納されている</li>
+				<li>制御ファイルには、コミットされたトランザクションの履歴が格納されている</li>
+				<li class="c">制御ファイルには、データファイルおよびREDOログファイルの名前と場所が格納されている</li>
+				<li>制御ファイルには、SYSDBA権限を持つユーザーのパスワードが格納されている</li>
+			</ol>
+			<p class="e">模擬試験 9</p>
+		</li>
+		<li><p class="q">3グループ2メンバーのREDOログファイルで運用している。正しい記述はどれか。</p>
+			<ol class="sa">
+				<li>メンバー間でログスイッチを行い、循環して使用する</li>
+				<li class="c">グループ間でログスイッチを行い、循環して使用する</li>
+				<li>グループ間でログスイッチを行い、バックアップを取得するまで、グループ数は増加し続ける</li>
+				<li>グループ間でログスイッチを行い、すべてのグループがREDOデータでいっぱいになると、LGWRによるREDOデータの書き込みが停止する</li>
+			</ol>
+			<p class="e">模擬試験 10</p>
+		</li>
+		<li><p class="q">全てのSQLコマンドを実行するために使用するツールはどれか。1つ選べ。</p>
+			<ol class="sa">
+				<li>Enterprise Manager Database Express</li>
+				<li>Database Configuration Assistant</li>
+				<li>SQL*Loader</li>
+				<li class="c">SQL*Plus</li>
+			</ol>
+			<p class="e">模擬試験 11</p>
+		</li>
+		<li><p class="q">Oracleデータベースの管理に使用するツールの説明として正しいものを選べ。</p>
+			<ol class="sa">
+				<li>Database Configuration Assistant (DBCA) : データベースの作成や、削除、アップグレードを行う</li>
+				<li>SQL*Plus : Oracleデータベースの管理作業をGUIでサポートする包括的な統合システムを提供する</li>
+				<li class="c">Oracle Net Manager : Oracle Netの設定を行う</li>
+				<li>Data Pump : OS上の外部ファイルのデータをOracleデータベースにロードする</li>
+			</ol>
+			<p class="e">模擬試験 12</p>
+		</li>
+		<li><p class="q">データベースのバックアップを取得するときに使用するツールはどれか。</p>
+			<ol class="sa">
+				<li>Resource Manager</li>
+				<li>Enterprise Manager Database Express</li>
+				<li class="c">Recovery Manager</li>
+				<li>Database Upgrade Assistant</li>
+			</ol>
+			<p class="e">模擬試験 13</p>
+		</li>
+		<li><p class="q">あるデータベースからスキーマ単位でデータをエクスポートし、別のデータベースにインポートしようと思う。何を使うか。</p>
+			<ol class="sa">
+				<li>SQL*Loader</li>
+				<li>SQL*Plus</li>
+				<li class="c">Data Pump</li>
+				<li>Enterprise Manager Database Express</li>
+			</ol>
+			<p class="e">模擬試験 14</p>
+		</li>
+		<li><p class="q">Real Application Clustersの説明として正しいものはどれか。</p>
+			<ol class="sa">
+				<li>1つのインスタンスから複数のデータベースを管理する</li>
+				<li class="c">複数のインスタンスから1つのデータベースを管理する</li>
+				<li>複数のインスタンスから複数のデータベースを管理する</li>
+				<li>1つのインスタンスから1つのデータベースを管理する</li>
+			</ol>
+			<p class="e">模擬試験 15</p>
+		</li>
+		<li><p class="q">Data Guardでは、本番データベースからスタンバイデータベースへ何を転送することでトランザクションを伝播するか。</p>
+			<ol class="sa">
+				<li>フラッシュバックログ</li>
+				<li class="c">REDO</li>
+				<li>UNDO</li>
+				<li>一時セグメント</li>
+			</ol>
+			<p class="e">模擬試験 16</p>
+		</li>
+		<li><p class="q">NOARCHIVELOGモードについて正しい説明を1つ選べ。</p>
+			<ol class="sa">
+				<li>全体バックアップであれば、データベースの起動中にバックアップを取得できる</li>
+				<li>障害発生直前の状態に復旧できる</li>
+				<li class="c">一貫性バックアップが取得できる</li>
+				<li>REDOログファイルがいっぱいになった場合、ALTER DATABASE ARCHIVELOGコマンドを実行して、手動でアーカイブできる</li>
+			</ol>
+			<p class="e">模擬試験 17</p>
+		</li>
+		<li><p class="q">NOARCHIVELOGモードで運用しているデータベースで、本日正午にメディア障害が発生した。昨日夜のデータベース正常停止後にバックアップを取得済みである。データベースをどの状態に復旧できるか。</p>
+			<ol class="sa">
+				<li>障害発生直前の状態</li>
+				<li class="c">昨日夜バックアップ取得時の状態</li>
+				<li>障害発生1時間前の状態</li>
+				<li>復旧は不可能</li>
+			</ol>
+			<p class="e">模擬試験 18</p>
+		</li>
+		<li><p class="q">ARCHIVELOGモードで運用している。正しいものはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">オンラインバックアップが可能</li>
+				<li class="c">トランザクションの完全リカバリが可能</li>
+				<li>READログファイルのログスイッチが実行されない</li>
+				<li>ARCHIVELOGモードに設定する前にREDOログファイルの多重化が必要</li>
+			</ol>
+			<p class="e">模擬試験 19</p>
+		</li>
+		<li><p class="q">環境変数ORACLE_SIDについて正しい説明はどれか。</p>
+			<ol class="sa">
+				<li>Oracleソフトウェアをインストールするディレクトリを指定する</li>
+				<li class="c">Oracleインスタンス名を指定できる</li>
+				<li>Oracleデータベースファイルを配置するディレクトリを指定する</li>
+				<li>SYSユーザーのパスワードを指定する</li>
+			</ol>
+			<p class="e">模擬試験 20</p>
+		</li>
+		<li><p class="q">環境変数ORACLE_HOMEについて正しい説明はどれか。</p>
+			<ol class="sa">
+				<li>Oracleソフトウェアのベースディレクトリ</li>
+				<li class="c">Oracleソフトウェアをインストールするディレクトリである</li>
+				<li>Oracleデータベースファイルを配置するディレクトリである</li>
+				<li>設定は任意である</li>
+				<li>Oracleインスタンス名を設定する</li>
+			</ol>
+			<p class="e">模擬試験 21</p>
+		</li>
+		<li><p class="q">OUIの説明として正しいものはどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">インストール前の前提条件のチェックができる</li>
+				<li>データベーステンプレートの管理ができる</li>
+				<li class="c">使用しないOracle製品の削除ができる</li>
+				<li class="c">インストールされているOracle製品を一覧表示することができる</li>
+				<li>データベース内のデータを別のデータベースに転送する</li>
+			</ol>
+			<p class="e">模擬試験 22</p>
+		</li>
+		<li><p class="q">Oracleインベントリディレクトリについての説明として正しいものを2つ選べ。</p>
+			<ol class="ma">
+				<li>通常、Oracleホームと同じ場所を指定する</li>
+				<li class="c">バッチを適用したり、既存のインストールをアップグレードしたり、Oracleソフトウェアを削除する際に使用する情報が格納される</li>
+				<li class="c">最初のインストール時に自動的に作成される</li>
+				<li>インストール時に作成しておく必要がある</li>
+				<li>データベースをアップグレードしたり、削除する際に使用されるデータベースファイルに関する情報が含まれる</li>
+			</ol>
+			<p class="e">模擬試験 23</p>
+		</li>
+		<li><p class="q">次の中からDBCAで設定できる事項はどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">高速リカバリ領域の指定</li>
+				<li class="c">サンプルスキーマの作成</li>
+				<li class="c">自動メモリー管理の使用</li>
+				<li>RAC(Oracle Real Application Clusters)の使用</li>
+				<li>tnsnames.oraファイルの作成</li>
+			</ol>
+			<p class="e">模擬試験 24</p>
+		</li>
+		<li><p class="q">現在使用中のデータベースがある。業務拡大のため、他支店にもデータベースを構築することになった。<br />
+			現在使用しているデータベースと同一のデータベースを構築するのに最適な手順を選べ。</p>
+			<ol class="sa">
+				<li>DBCAで「既存のデータベースを使用(構造のみ)」を選択してテンプレートを作成し、そのテンプレートを使用して新規データベースを作成する</li>
+				<li>既存のテンプレートを原稿のデータベースに合わせてカスタマイズし、そのテンプレートを使用して新規データベースを作成する</li>
+				<li>データベースをカスタムデータベースで作成し、既存データベースからDataPumpを使用してデータをコピーする</li>
+				<li class="c">DBCAで「既存のデータベースを使用(データ及び構造)」を選択してテンプレートを作成し、そのテンプレートを使用して新規データベースを作成する</li>
+				<li>CREATE DATABASE文を手動で作成し、SQL*Plusで実行する</li>
+			</ol>
+			<p class="e">模擬試験 25</p>
+		</li>
+		<li><p class="q">EM Expressのポート番号を調べる方法はどれか。</p>
+			<ol class="sa">
+				<li>init.oraを調べる</li>
+				<li>listener.oraを調べる</li>
+				<li class="c">SELECT dbms_xdb_config.gethttpsport FROM dual; を実行する</li>
+				<li>DBMS_XDB_CONFIG.SETHTTPSPORTプロシージャを実行する</li>
+			</ol>
+			<p class="e">模擬試験 26</p>
+		</li>
+		<li><p class="q">EM Expressでできることはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li>リスナーの起動と停止</li>
+				<li class="c">ユーザーの作成/変更</li>
+				<li>インスタンスの起動と停止</li>
+				<li class="c">表領域の作成/変更</li>
+				<li>ジョブの実行</li>
+			</ol>
+			<p class="e">模擬試験 27</p>
+		</li>
+		<li><p class="q">任意のユーザーを作成し、そのユーザーでEM Expressでパフォーマンスの監視のみを行うようにしたい。どのロールを設定すればよいか。</p>
+			<ol class="sa">
+				<li class="c">EM_EXPRESS_BASIC</li>
+				<li>OEM_MONITOR</li>
+				<li>SELECT_CATALOG_ROLE</li>
+				<li>EM_EXPRESS_ALL</li>
+			</ol>
+			<p class="e">模擬試験 28</p>
+		</li>
+		<li><p class="q">任意のユーザーを作成し、そのユーザーでEM Expressでパフォーマンスの監視と必要に応じた設定を行うようにしたい。どのロールをせて治すればよいか</p>
+			<ol class="sa">
+				<li>EM_EXPRESS_BASIC</li>
+				<li>OEM_MONITOR</li>
+				<li>SELECT_CATALOG_ROLE</li>
+				<li class="c">EM_EXPRESS_ALL</li>
+			</ol>
+			<p class="e">模擬試験 29</p>
+		</li>
+		<li><p class="q">SQL*Plusでできることはどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li>リスナーの設定</li>
+				<li class="c">PL/SQLブロックの実行</li>
+				<li class="c">DDL文の実行</li>
+				<li>listener.oraファイルの作成</li>
+				<li class="c">データベースの起動と停止</li>
+			</ol>
+			<p class="e">模擬試験 30</p>
+		</li>
+		<li><p class="q">TCP/IPプロトコルのリスナーを構成するために必須なものはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">ホスト名またはIPアドレス</li>
+				<li class="c">ポート番号</li>
+				<li>ログファイルの保存先</li>
+				<li>IPCキー値</li>
+				<li>エラーファイルの保存先</li>
+			</ol>
+			<p class="e">模擬試験 31</p>
+		</li>
+		<li><p class="q">リモートアプリケーションからデータベースインスタンスに接続できるように構成したい。どのツールを使って構成するか。2つ選べ。</p>
+			<ol class="ma">
+				<li>Database Configuration Assistant (DBCA)</li>
+				<li>EM Express</li>
+				<li class="c">Oracle Net Configuration Assistant</li>
+				<li class="c">Oracle Net Manager</li>
+				<li>SQL*Plus</li>
+			</ol>
+			<p class="e">模擬試験 32</p>
+		</li>
+		<li><p class="q">リスナー制御ユーティリティでできることはどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">リスナーの起動</li>
+				<li class="c">リスナーの停止</li>
+				<li class="c">リスナーの稼働状態の確認</li>
+				<li>リスナーの削除</li>
+			</ol>
+			<p class="e">模擬試験 33</p>
+		</li>
+		<li><p class="q"><pre>$ lsnrctl status</pre>
+			このコマンドの結果によって得られる情報として正しいものはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">リスナーのアドレス</li>
+				<li class="c">リスナーに登録されているサービスのサマリー</li>
+				<li>全てのリスナーのステータス</li>
+				<li>リスナーを介して接続したすべてのクライアント</li>
+				<li>ネットワーク転送量</li>
+			</ol>
+			<p class="e">模擬試験 34</p>
+		</li>
+		<li><p class="q">デフォルトリスナーを使用している。クライアントから接続できないとの連絡があったため、lsnrctlコマンドを使用して、リスナーが稼働中か停止しているかを確認しようと思う。適切なものを3つ選べ。</p>
+			<ol class="ma">
+				<li>lsnrctl services 1521</li>
+				<li class="c">lsnrctl services</li>
+				<li class="c">lsnrctl status</li>
+				<li class="c">lsnrctl status listener</li>
+				<li>lsnrctl status 1521</li>
+			</ol>
+			<p class="e">模擬試験 35</p>
+		</li>
+		<li><p class="q">簡易接続ネーミングの特徴について正しいのはどれか。</p>
+			<ol class="sa">
+				<li>リスナーを不要とする</li>
+				<li>接続時にユーザー名とパスワードが不要</li>
+				<li>構成情報をファイルに保存する</li>
+				<li class="c">構成する必要がない</li>
+				<li>プロトコルの指定が必要である</li>
+			</ol>
+			<p class="e">模擬試験 36</p>
+		</li>
+		<li><p class="q">Oracleデータベースに接続できるよう、クライアントマシンにOracleデータベースのクライアントソフトウェアをインストールした。インストール後、ローカルネーミングメソッドを構成するために使用するツールを2つ選べ。</p>
+			<ol class="ma">
+				<li>SQL*Plus</li>
+				<li>EM Express</li>
+				<li class="c">Oracle Net Configuration Assistant</li>
+				<li>Database Configuration Assistant</li>
+				<li class="c">Oracle Net Manager</li>
+			</ol>
+			<p class="e">模擬試験 37</p>
+		</li>
+		<li><p class="q">インスタンスを起動したあと、どのような状態になるか。2つ選べ。</p>
+			<ol class="ma">
+				<li>NOMOUNT中にREDOログファイルの整合性をチェックする</li>
+				<li>REDOログファイルを読み込んでMOUNTする</li>
+				<li class="c">MOUNT状態からOPEN状態に遷移するとき、データファイルの整合性をチェックする</li>
+				<li>制御ファイルを読み込んでOPEN状態になる</li>
+				<li class="c">ユーザーはOPEN状態でデータを問い合わせることができる</li>
+			</ol>
+			<p class="e">模擬試験 38</p>
+		</li>
+		<li><p class="q">NOMOUNT、MOUNT状態で接続できる権限はどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li>DBAロール</li>
+				<li class="c">SYSDBA</li>
+				<li>AUTHENTICATED USER</li>
+				<li class="c">SYSOPER</li>
+				<li>RESOURCEロール</li>
+			</ol>
+			<p class="e">模擬試験 39</p>
+		</li>
+		<li><p class="q">データベースを起動するまでの順番で正しいのはどれか。<br />
+			<br />
+			①バックグラウンドプロセスの起動<br />
+			②データファイルの整合性のチェック<br />
+			③制御ファイルの読込み<br />
+			④REDOログファイルの読込み<br />
+			⑤初期化パラメータファイルの読込み<br />
+			⑥リカバリセッションの開始<br />
+			⑦SGAの割り当て</p>
+			<ol class="ma">
+				<li>⑤→①→⑦→⑤→④→⑥</li>
+				<li>⑤→⑦→①→②→④→③→⑥</li>
+				<li class="c">⑤→⑦→①→③→④→②→⑥</li>
+				<li>⑤→①→⑦→③→④→②→⑥</li>
+				<li>⑤→⑦→①→②→③→④→⑥</li>
+			</ol>
+			<p class="e">模擬試験 40</p>
+		</li>
+		<li><p class="q">SHUTDOWN TRANSACTIONALコマンドについて正しい記述はどれか。</p>
+			<ol class="sa">
+				<li>トランザクションの終了を待機せずに停止する</li>
+				<li class="c">停止後、データベースファイルは整合性が取れた状態になる</li>
+				<li>全てのセッションがユーザーによって切断されるのを待機してから停止する</li>
+				<li>次の再起動時にインスタンスリカバリが自動的に行われる</li>
+			</ol>
+			<p class="e">模擬試験 41</p>
+		</li>
+		<li><p class="q">データベースを停止しようと思う。クライアントが接続中であっても、トランザクションの実行中であっても、強制的に呈するモードで、かつ、次回再起動時にインスタンスリカバリが行われない停止モードはどれか。</p>
+			<ol class="sa">
+				<li>NORMAL</li>
+				<li>TRANSACTIONAL</li>
+				<li class="c">IMMEDIATE</li>
+				<li>ABORT</li>
+			</ol>
+			<p class="e">模擬試験 42</p>
+		</li>
+		<li><p class="q">MEMORY_TARGETに関して正しい説明はどれか。</p>
+			<ol class="sa">
+				<li>SGAおよびPGAの現在のサイズの合計未満に設定する必要がある</li>
+				<li class="c">Oracleシステム全体の使用可能なメモリーを指定する</li>
+				<li>0に設定するとエラーになる</li>
+				<li>実メモリー以上に設定する必要がある</li>
+			</ol>
+			<p class="e">模擬試験 43</p>
+		</li>
+		<li><p class="q">初期化パラメータを次の通り設定している。<br />
+			<br />
+			MEMORY_TARGET=1000M<br />
+			SGA_TARGET=600M<br />
+			<br />
+			正しい説明はどれか。</p>
+			<ol class="sa">
+				<li class="c">SGA全体のメモリーサイズの下限値が600Mに設定される</li>
+				<li>SGA全体のメモリーサイズの上限値が600Mに設定される</li>
+				<li>SGA全体のメモリーサイズが600Mに固定される</li>
+				<li>エラーになる</li>
+			</ol>
+			<p class="e">模擬試験 44</p>
+		</li>
+		<li><p class="q">PGA_AGGREGATE_TARGET初期化パラメータを100Mに設定し、即座に反映したいと考えている。実行すべきコマンドを選べ。</p>
+			<ol class="sa">
+				<li class="c">ALTER SYSTEM SET PGA_AGGREGATE_TARGET=100m;</li>
+				<li>ALTER SYSTEM SET PGA_AGGREGATE_TARGET=100m SCOPE=SPFILE;</li>
+				<li>ALTER SYSTEM SET PGA_AGGREGATE_TARGET=100m SCOPE=IMMEDIATE;</li>
+				<li>静的なパラメータのため、即座に反映できない</li>
+			</ol>
+			<p class="e">模擬試験 45</p>
+		</li>
+		<li><p class="q">SGA_MAX_SIZE初期化パラメータを1Gに設定し、即座に反映したいと考えている。実行すべきコマンドを選べ。</p>
+			<ol class="sa">
+				<li>ALTER SYSTEM SET SGA_MAX_SIZE=1G;</li>
+				<li>ALTER SYSTEM SET SGA_MAX_SIZE=1G SCOPE=SPFILE;</li>
+				<li>ALTER SYSTEM SET SGA_MAX_SIZE=1G SCOPE=IMMEDIATE;</li>
+				<li class="c">静的なパラメータのため、即座に反映できない</li>
+			</ol>
+			<p class="e">模擬試験 46</p>
+		</li>
+		<li><p class="q">REDOログファイルについて正しい説明を3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">データベースに対して更新処理が実行されると、カレントのグループのすべてのメンバーに、REDOデータを書き込む</li>
+				<li>データベースに対して更新処理が実行されると、オンラインのグループのカレントのメンバーに、REDOデータを書き込む</li>
+				<li>REDOログファイルは同一グループ内の各メンバーは異なるファイルサイズで構わない</li>
+				<li class="c">REDOログファイルの同一グループ内の各メンバーはすべて同じファイルサイズでなければいけない</li>
+				<li class="c">REDOログファイルは循環使用される</li>
+			</ol>
+			<p class="e">模擬試験 47</p>
+		</li>
+		<li><p class="q">Oracleデータベースの記憶領域に関する説明として正しいものを2つ選べ。</p>
+			<ol class="ma">
+				<li>エクステントは1つ以上のセグメントから構成されている</li>
+				<li class="c">セグメントは1つ以上のエクステントから構成されている</li>
+				<li>エクステントは複数の表領域にまたがることができる</li>
+				<li class="c">表領域は1つ以上のデータファイルから構成されている</li>
+				<li>セグメントは複数の表領域に属することができる</li>
+			</ol>
+			<p class="e">模擬試験 48</p>
+		</li>
+		<li><p class="q">smallfile表領域のストレージ容量を増やしたい。どの方法が適しているか。3つ選べ。</p>
+			<ol class="ma">
+				<li>ロググループのメンバー数を増やす</li>
+				<li class="c">表領域にデータファイルを追加する</li>
+				<li class="c">データファイルのサイズを変更する</li>
+				<li class="c">データファイルをAUTOEXTENDに設定する</li>
+				<li>DBCAでデータベースを作成する</li>
+			</ol>
+			<p class="e">模擬試験 49</p>
+		</li>
+		<li><p class="q">次のコマンドを使用して、customersという表領域をデータベースから削除した。なお、customers表領域には4つの表と6つの索引が格納されている。<br />
+			<br />
+			<pre>DROP TABLESPACE customers INCLUDING CONTENTS AND DATAFILES;</pre>
+			この削除の結果はどうなるか。</p>
+			<ol class="sa">
+				<li>オブジェクトが格納されている表領域のため、エラーになる</li>
+				<li class="c">この表領域に関連付けられているデータファイルがOSファイルシステム上から削除される</li>
+				<li>この表領域内にあるオブジェクトは、全てSYUSTEM表領域に移動され、データも保持される</li>
+				<li>この表領域に関連付けられているデータファイルのファイル名などの情報が制御ファイルから削除されるが、OS上の物理ファイルはそのまま残される</li>
+			</ol>
+			<p class="e">模擬試験 50</p>
+		</li>
+		<li><p class="q">UNDOデータの使用目的として正しいものを3つ選べ。</p>
+			<ol class="ma">
+				<li>障害発生時、変更後のデータに回復する</li>
+				<li class="c">トランザクションロールバック時に変更前データに回復する</li>
+				<li class="c">読取り一貫性を保証する</li>
+				<li class="c">フラッシュバック機能を実現する</li>
+				<li>ソート処理中に一時的に保持される</li>
+			</ol>
+			<p class="e">模擬試験 51</p>
+		</li>
+		<li><p class="q">UNDOとREDOの違いについて正しい記述はどれか。</p>
+			<ol class="sa">
+				<li class="c">UNDOは変更を取り消し、REDOは変更を再実行する</li>
+				<li>UNDOは変更を再実行し、REDOは変更を取り消す</li>
+				<li>UNDOもREDOもコミットのタイミングで、データベースファイルに書き出される</li>
+				<li>UNDOもREDOもファイルを多重化することができる</li>
+			</ol>
+			<p class="e">模擬試験 52</p>
+		</li>
+		<li><p class="q">UNDO表領域に関して正しい記述はどれか。</p>
+			<ol class="sa">
+				<li>UNDO表領域は自動拡張に設定することができない</li>
+				<li>UNDO表領域は1つのデータベースに1つしか作成できない</li>
+				<li>UNDO表領域は、常に単一のデータファイルから構成される</li>
+				<li class="c">使用可能にできるUNDO表領域は1つだけである</li>
+			</ol>
+			<p class="e">模擬試験 53</p>
+		</li>
+		<li><p class="q">次のSQL文を実行したところ、エラーになった。
+			<br />
+<pre>DROP USER scott;
+DROP USER scott
+*
+ERROR at line 1:
+ORA-01922: CASCADE must be specified to drop 'SCOTT'</pre>
+			エラーになる原因はどれか。</p>
+			<ol class="sa">
+				<li class="c">オブジェクトを所有している</li>
+				<li>ユーザーが現在接続中である</li>
+				<li>同じユーザー名が複数ある</li>
+				<li>アカウントロック中である</li>
+				<li>既に削除されている</li>
+			</ol>
+			<p class="e">模擬試験 54</p>
+		</li>
+		<li><p class="q">CREATE USERコマンドによるユーザー作成時に設定できることはどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">認証方式</li>
+				<li class="c">プロファイル</li>
+				<li class="c">デフォルト表領域</li>
+				<li>システム権限</li>
+				<li>ロール</li>
+			</ol>
+			<p class="e">模擬試験 55</p>
+		</li>
+		<li><p class="q"><pre>ALTER USER scott ACCOUNT LOCK;</pre>
+			上記のSQLを実行した結果について正しいものはどれか。</p>
+			<ol class="sa">
+				<li class="c">このユーザーが所有するオブジェクトのアクセス権限を持つ他のユーザーは、そのオブジェクトにアクセスできる</li>
+				<li>このユーザーは、アクセス権がある他のユーザーのオブジェクトにアクセスできる</li>
+				<li>パスワードが期限切れになり、次回ログイン時にパスワードの変更が求められる</li>
+				<li>このユーザーは二度とログインできない</li>
+				<li>翌日にはログイン可能となる</li>
+			</ol>
+			<p class="e">模擬試験 56</p>
+		</li>
+		<li><p class="q"><pre>CREATE USER scott
+IDENTIFIED BY tiger
+DEFAULT TABLESPACE users
+TEMPORARY TABLESPACE temp
+QUOTA 50M ON users
+QUOTA 5M ON example
+PROFILE DEFAULT
+PASSWORD EXPIRE;</pre>
+			上記のSQLを実行した結果について正しいものはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li class="c">usersとexampleに、記憶域を割り当て可能</li>
+				<li>tempにクォータ設定がないためディスクソートが正常に実行できない</li>
+				<li>プロファイルの名前を指定していないため文は正常に実行できない</li>
+				<li class="c">ユーザーは初回ログイン時にパスワード変更が求められる</li>
+			</ol>
+			<p class="e">模擬試験 57</p>
+		</li>
+		<li><p class="q">SYSOPERでは実行できず、SYSDBAのみが実行できる操作はどれか。</p>
+			<ol class="sa">
+				<li>インスタンスの起動</li>
+				<li>ABORTでのインスタンスの停止</li>
+				<li class="c">データベースの作成</li>
+				<li>完全リカバリ</li>
+			</ol>
+			<p class="e">模擬試験 58</p>
+		</li>
+		<li><p class="q">ロールに関して正しい記述はどれか。</p>
+			<ol class="sa">
+				<li>ロールにはシステム権限のみを付与できる</li>
+				<li>ロールにはオブジェクト権限のみを付与できる</li>
+				<li class="c">ロールには別のロールを付与することもできる</li>
+				<li>1つのロールに、オブジェクト権限とシステム権限の両方を付与することはできない</li>
+			</ol>
+			<p class="e">模擬試験 59</p>
+		</li>
+		<li><p class="q">データベース管理者(DBA)が、SCOTT.EMP表に対してSELECT、INSERTの各権限を持つEMP_ROLEというロールを作成した。このEMP_ROLEをKINGに付与した。KINGはSCOTT.EMP表に対するSELECT権限を別途SCOTTから付与されている。<br />
+			SCOTTがKINGのSELECT権限を取り消すコマンドを実行した。結果はどうなるか。</p>
+			<ol class="sa">
+				<li>KINGはSCOTT.EMPに対する問い合わせができなくなる</li>
+				<li class="c">KINGは引き続きSCOTT.EMPに対する問い合わせを実行できる</li>
+				<li>KINGとEMP_ROLEの両方からSELECT権限が取り消される</li>
+				<li>エラーが発生する</li>
+			</ol>
+			<p class="e">模擬試験 60</p>
+		</li>
+		<li><p class="q">制約について正しい説明はどれか。</p>
+			<ol class="sa">
+				<li>CHECK制約は、列にNULLが設定されることを禁止する</li>
+				<li>外部キー制約は、参照キーに対して設定する</li>
+				<li>主キー制約はNULLを挿入できる</li>
+				<li class="c">一意キー制約は同じ表に複数指定できる</li>
+			</ol>
+			<p class="e">模擬試験 61</p>
+		</li>
+		<li><p class="q">フラッシュバックドロップ機能について、正しい説明を選べ。</p>
+			<ol class="sa">
+				<li>削除された表はUNDO表領域に保管される</li>
+				<li>削除された表はSYSTEM表領域に保管される</li>
+				<li>削除された表はSYSAUX表領域に保管される</li>
+				<li class="c">FLASHBACK TABLEコマンドで復元できる</li>
+				<li>FLASHBACK DROPコマンドで復元できる</li>
+			</ol>
+			<p class="e">模擬試験 62</p>
+		</li>
+		<li><p class="q"><pre>CREATE TABLE employees
+( employee_id	number constraint emp_pk primary key,
+  first_name	varchar2(25) not null,
+  last_name		varchar2(25) not null,
+  salary		number(8,2),
+  hire_date		date not null,
+  department_id	number(4));
+
+CREATE VIEW myemp_v (empid,ename,sal,hiredate,deptno)
+AS SELECT employee_id,last_name,salary,hire_date,department_id
+FROM employees;</pre>
+			上記の文について正しいものはどれか。</p>
+			<ol class="sa">
+				<li>列名が一致していないため、文は正常に実行されない</li>
+				<li>NOT NULL制約を含むいくつかの列がビュー定義に含まれていないため文は正常に実行されない</li>
+				<li class="c">ビューを更新すると指定された列の元表が更新される</li>
+				<li>ビューに挿入すると指定された列の元表に追加される</li>
+			</ol>
+			<p class="e">模擬試験 63</p>
+		</li>
+		<li><p class="q">索引について正しい記述を選べ。</p>
+			<ol class="sa">
+				<li class="c">データへのアクセス時に自動で使用される</li>
+				<li>表とは物理的に独立しているため表が削除されても索引は残る</li>
+				<li>表に更新が発生した場合、明示的に索引にも変更を反映させるように定期的にコマンドを実行する</li>
+				<li>索引はWHERE句に使用される列に自動的に作成される</li>
+			</ol>
+			<p class="e">模擬試験 64</p>
+		</li>
+		<li><p class="q">索引について正しいものはどれか。2つ選べ。</p>
+			<ol class="ma">
+				<li>表の1つの列にのみ作成できる</li>
+				<li class="c">表を更新すると自動的にメンテナンスされる</li>
+				<li class="c">表を削除すると索引も一緒に削除される</li>
+				<li>一意の列にのみ作成できる</li>
+			</ol>
+			<p class="e">模擬試験 65</p>
+		</li>
+		<li><p class="q">ADDM分析を30分間隔で行いたい。どのようにするか。</p>
+			<ol class="sa">
+				<li class="c">AWRスナップショットの取得を30分間隔にする</li>
+				<li>ADDMメトリックしきい値に30分と設定する</li>
+				<li>自動タスクスケジューリングを作成する</li>
+				<li>ADDMの起動を30分間隔にする</li>
+			</ol>
+			<p class="e">模擬試験 66</p>
+		</li>
+		<li><p class="q">MMONプロセスが実行する処理はどれか</p>
+			<ol class="sa">
+				<li>REDOログファイルをアーカイブログファイルとしてコピーする</li>
+				<li class="c">AWRスナップショットの取得</li>
+				<li>インスタンス障害発生後のインスタンス再起動時に、インスタンス回復を行う</li>
+				<li>変更済みブロックをデータファイルに書き込む</li>
+			</ol>
+			<p class="e">模擬試験 67</p>
+		</li>
+		<li><p class="q">自動データベース診断モニター(ADDM)が分析に使用する情報の格納場所を選べ。</p>
+			<ol class="sa">
+				<li class="c">自動ワークロードリポジトリ(AWR)</li>
+				<li>自動診断リポジトリ(ADR)</li>
+				<li>RMANリポジトリ</li>
+				<li>データディクショナリ</li>
+			</ol>
+			<p class="e">模擬試験 68</p>
+		</li>
+		<li><p class="q">SQLチューニングアドバイザが診断するものについて、正しいものはどれか。3つ選べ。</p>
+			<ol class="ma">
+				<li class="c">欠落、失効した統計の収集</li>
+				<li class="c">新しい索引の作成</li>
+				<li class="c">意味的SQLの修正</li>
+				<li>マテリアライズドビューの作成</li>
+				<li>パーティション表の作成</li>
+			</ol>
+			<p class="e">模擬試験 69</p>
+		</li>
+		<li><p class="q">SQLアクセスアドバイザはどのような推奨を作成するか。2つ選べ</p>
+			<ol class="ma">
+				<li>統計情報の収集</li>
+				<li class="c">パーティション表の作成</li>
+				<li class="c">マテリアライズドビューの作成</li>
+				<li>SQLプロファイルの作成</li>
+			</ol>
+			<p class="e">模擬試験 70</p>
+		</li>
+	</ol>
+	</div>
+	</li>
+	</ol>
+	</div>
+	</li>
+</ol>
+</body>
+</html>
