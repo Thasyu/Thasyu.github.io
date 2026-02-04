@@ -130,13 +130,13 @@ function eventClickAnswer(e)
 	if (correct) {
 		ol.find('li.c').addClass('correct');
 		current.score++;
-		$('#result').html('<div class="result-icon" style="color: #4CAF50;">◯</div><div class="result-text" style="color: #4CAF50;">正解！</div>');
+		$('#result').html('<div class="result-icon" style="color: #4CAF50;">◯</div>');
 	} else {
 		// 選択した選択肢をグレーで目立たなくする
 		ol.find('li.selected').addClass('wrong-answer');
 		// 正解の選択肢を赤い背景と赤文字で表示
 		ol.find('li.c').addClass('show-answer');
-		$('#result').html('<div class="result-icon" style="color: #f44336;">✕</div><div class="result-text" style="color: #f44336;">残念...</div>');
+		$('#result').html('<div class="result-icon" style="color: #f44336;">✕</div>');
 	}
 	
 	// フェードイン・フェードアウト表示
