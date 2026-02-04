@@ -559,20 +559,16 @@ li.wrong-answer img {
 
 #result {
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	font-size: 28px;
-	font-weight: bold;
-	padding: 30px 50px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	z-index: 9999;
-	background-color: rgba(255, 255, 255, 0.95);
-	border-radius: 20px;
-	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.85);
 	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
 	pointer-events: none;
@@ -580,6 +576,18 @@ li.wrong-answer img {
 
 #result.show {
 	opacity: 1;
+}
+
+#result .result-icon {
+	font-size: 120pt;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+
+#result .result-text {
+	font-size: 32pt;
+	font-weight: bold;
 }
 
 @keyframes fadeInOut {
