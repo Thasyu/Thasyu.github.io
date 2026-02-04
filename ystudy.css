@@ -635,89 +635,89 @@ p.e {
 /* iPad 横画面（ランドスケープ）専用設定 */
 @media screen and (orientation: landscape) {
 	body {
-		padding: 66px 0 162px 0;
+		padding: 53px 0 130px 0;
 		margin: 0% 3%;
-		font-size: 16px;
-	}
-	
-	h1 {
-		padding: 8px 22px;
-		font-size: 17pt;
-	}
-	
-	h2 {
-		padding: 8px 14px;
-		margin: 22px 0 11px 0;
-		font-size: 18px;
-	}
-	
-	body > ol > li > h2 {
-		padding: 8px 14px;
-		margin: 22px 0 11px 0;
-		font-size: 18px;
-	}
-	
-	.home-button {
-		top: 11px;
-		right: 11px;
-		padding: 7px 14px;
-		font-size: 14px;
-	}
-	
-	#navigator {
-		bottom: 90px;
-	}
-	
-	.nav-btn {
-		padding: 7px 14px;
 		font-size: 13px;
 	}
 	
+	h1 {
+		padding: 6px 18px;
+		font-size: 14pt;
+	}
+	
+	h2 {
+		padding: 6px 11px;
+		margin: 18px 0 9px 0;
+		font-size: 14px;
+	}
+	
+	body > ol > li > h2 {
+		padding: 6px 11px;
+		margin: 18px 0 9px 0;
+		font-size: 14px;
+	}
+	
+	.home-button {
+		top: 9px;
+		right: 9px;
+		padding: 6px 11px;
+		font-size: 11px;
+	}
+	
+	#navigator {
+		bottom: 72px;
+	}
+	
+	.nav-btn {
+		padding: 6px 11px;
+		font-size: 10px;
+	}
+	
 	.nav-btn-answer {
-		padding: 13px 25px;
-		font-size: 23px;
-		margin: 0 auto 18px auto;
+		padding: 10px 20px;
+		font-size: 18px;
+		margin: 0 auto 14px auto;
 	}
 	
 	ol.katakana > li {
-		padding: 10px 12px 10px 46px;
-		margin: 5px 0 12px 0;
-		font-size: 16px;
+		padding: 8px 10px 8px 37px;
+		margin: 4px 0 10px 0;
+		font-size: 13px;
 		line-height: 1.35;
 	}
 	
 	ol.katakana > li:before {
-		width: 14px;
-		height: 14px;
-		left: 13px;
+		width: 11px;
+		height: 11px;
+		left: 10px;
 	}
 	
 	li.selected:before {
-		font-size: 12px;
+		font-size: 10px;
 	}
 	
 	#progress {
-		font-size: 7pt;
-		padding: 3px 7px;
-		border-radius: 7px;
+		font-size: 6pt;
+		padding: 2px 6px;
+		border-radius: 6px;
 	}
 	
 	#result {
-		margin: 17px auto;
-		min-height: 38px;
-		font-size: 23px;
-		padding: 10px;
+		margin: 14px auto;
+		min-height: 30px;
+		font-size: 18px;
+		padding: 8px;
 	}
 	
 	body > ul > li > a,
 	#menu ul li a {
-		padding: 12px 14px;
-		font-size: 16px;
+		padding: 10px 11px;
+		font-size: 13px;
 	}
 	
 	body > ul > li small,
 	#menu ul li span {
-		font-size: 12px;
+		font-size: 10px;
 	}
 	
 	#score {
