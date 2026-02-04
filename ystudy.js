@@ -130,14 +130,20 @@ function eventClickAnswer(e)
 	if (correct) {
 		ol.find('li.c').addClass('correct');
 		current.score++;
-		$('#result').html('<span style="color: blue; font-size: 28pt; font-weight: bold;">◯ 正解</span>');
+		$('#result').html('<span style="color: #2196F3; font-size: 36pt; font-weight: bold;">◯ 正解</span>');
 	} else {
 		// 選択した選択肢をグレーで目立たなくする
 		ol.find('li.selected').addClass('wrong-answer');
 		// 正解の選択肢を赤い背景と赤文字で表示
 		ol.find('li.c').addClass('show-answer');
-		$('#result').html('<span style="color: red; font-size: 28pt; font-weight: bold;">✕ 不正解</span>');
+		$('#result').html('<span style="color: #f44336; font-size: 36pt; font-weight: bold;">✕ 不正解</span>');
 	}
+	
+	// フェードイン・フェードアウト表示
+	$('#result').addClass('show');
+	setTimeout(function() {
+		$('#result').removeClass('show');
+	}, 2000);
 
 	// ボタンを更新
 	updateNavigator();
