@@ -39,22 +39,6 @@ iPad Pro（13インチ）向けに最適化された学習システムです。
 2. `index.html` をブラウザで開く
 3. 学習したい試験を選択
 
-## デプロイ方法
-
-### Renderへのデプロイ
-
-このサイトは静的サイトとしてRenderにデプロイできます。
-
-1. GitHubにリポジトリをプッシュ
-2. [Render](https://render.com) にログイン
-3. "New Static Site" を選択
-4. GitHubリポジトリを接続
-5. 以下の設定を使用：
-   - **Build Command**: `echo "No build required"`
-   - **Publish Directory**: `.`（ルートディレクトリ）
-
-`render.yaml` ファイルが含まれているため、自動的に設定が適用されます。
-
 ## ブラウザ対応
 
 - Safari (iPad Pro推奨)
